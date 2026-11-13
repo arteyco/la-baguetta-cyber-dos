@@ -1,0 +1,2226 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Baguetta Bogota-city — Slow bread &amp; proper tarts, Bandra West</title>
+<meta name="description" content="A two-oven Bogota - city in Bandra West, Bogota - D.C.. Naturally leavened sourdough, laminated viennoiserie and tarts. Shop online, pay by card, UPI or crypto, and ask Crumb — our bakebook bot — anything.">
+<meta name="theme-color" content="#FBF7F0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23C0561F'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Georgia,serif' fill='%23FFF6E8' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ---------------------------------------------------------------- tokens */
+:root{
+  --bg:#FBF7F0; --bg-2:#F2EADD; --card:#FFFDF9; --ink:#1C1511; --muted:#6C5B4D;
+  --line:rgba(28,21,17,.13); --brand:#C0561F; --brand-2:#E08A3C; --brand-ink:#8C3C12;
+  --green:#3E6B4F; --gold:#D9A441; --danger:#B23A2A; --ok:#2F7A4F;
+  --shadow:0 22px 55px -28px rgba(58,35,18,.55);
+  --shadow-sm:0 8px 24px -16px rgba(58,35,18,.5);
+  --radius:22px; --radius-sm:14px;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+[data-theme="dark"]{
+  --bg:#120F0C; --bg-2:#1B1611; --card:#1F1913; --ink:#F7EFE4; --muted:#B6A492;
+  --line:rgba(247,239,228,.14); --brand:#F08A45; --brand-2:#F0B45E; --brand-ink:#FFC08A;
+  --green:#8CBB98; --gold:#EFC46A; --danger:#F0897A; --ok:#7FD3A4;
+  --shadow:0 26px 60px -30px rgba(0,0,0,.9);
+  --shadow-sm:0 10px 26px -18px rgba(0,0,0,.9);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--sans);background:var(--bg);color:var(--ink);
+  line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+body.lock{overflow:hidden}
+img,svg{display:block;max-width:100%}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+a{color:inherit;text-decoration:none}
+p{margin:0 0 .8em}
+h1,h2,h3,h4{margin:0;line-height:1.12;letter-spacing:-.02em}
+ul,ol{margin:0;padding:0}
+:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:6px}
+::selection{background:var(--brand);color:#fff}
+.wrap{width:min(1180px,100% - 2.4rem);margin-inline:auto}
+.muted{color:var(--muted)}
+.hide{display:none !important}
+
+/* ---------------------------------------------------------------- chrome */
+.skip{position:absolute;left:-999px;top:0;background:var(--card);padding:.8rem 1.1rem;z-index:200}
+.skip:focus{left:1rem;top:1rem;border-radius:10px;border:1px solid var(--line)}
+
+.ticker{background:var(--ink);color:var(--bg);overflow:hidden;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.ticker-track{display:flex;width:max-content;animation:marquee 38s linear infinite;padding:.5rem 0}
+.ticker span{padding:0 1.6rem;white-space:nowrap;opacity:.9}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+.hdr{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(16px) saturate(1.4);border-bottom:1px solid var(--line)}
+.hdr-inner{display:flex;align-items:center;gap:1.25rem;height:72px;position:relative}
+.brand{display:flex;align-items:center;gap:.65rem;margin-right:auto}
+.mark{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(145deg,var(--brand),var(--brand-2));color:#FFF6E8;box-shadow:var(--shadow-sm);flex:none}
+.mark svg{width:22px;height:22px}
+.brand-txt{display:flex;flex-direction:column;line-height:1.15}
+.brand-txt b{font-family:var(--serif);font-size:1.18rem;font-weight:600;letter-spacing:-.01em}
+.brand-txt small{font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.brand-txt b{white-space:nowrap}
+.nav{display:flex;align-items:center;gap:1.7rem}
+.nav a{font-size:.89rem;font-weight:500;color:var(--muted);position:relative;padding:.25rem 0;transition:color .2s}
+.nav a::after{content:"";position:absolute;left:0;right:100%;bottom:-3px;height:2px;background:var(--brand);transition:right .25s}
+.nav a:hover{color:var(--ink)}
+.nav a:hover::after{right:0}
+.hdr-actions{display:flex;align-items:center;gap:.5rem}
+.icon-btn{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;border:1px solid var(--line);background:var(--card);transition:.18s;flex:none}
+.icon-btn:hover{background:var(--bg-2);transform:translateY(-1px)}
+.icon-btn svg{width:19px;height:19px}
+.cart-btn{display:flex;align-items:center;gap:.5rem;height:42px;padding:0 .95rem;border-radius:12px;background:var(--ink);color:var(--bg);font-size:.85rem;font-weight:600;transition:.18s;flex:none}
+.cart-btn:hover{transform:translateY(-1px);opacity:.92}
+.cart-btn svg{width:18px;height:18px}
+.count{min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:var(--brand);color:#fff;font-size:.7rem;display:grid;place-items:center;font-weight:700}
+.nav-toggle{display:none}
+.bump{animation:bump .45s ease}
+@keyframes bump{0%,100%{transform:scale(1)}35%{transform:scale(1.12)}}
+@media(max-width:900px){
+  .nav{position:absolute;top:calc(100% + 1px);left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
+       background:var(--card);border-bottom:1px solid var(--line);padding:.35rem 1.2rem 1rem;display:none;
+       box-shadow:0 30px 40px -30px rgba(0,0,0,.4)}
+  .nav.open{display:flex}
+  .nav a{padding:.85rem 0;border-bottom:1px solid var(--line);font-size:.95rem}
+  .nav a:last-child{border-bottom:0}
+  .nav-toggle{display:grid}
+  .cart-btn span.label{display:none}
+}
+@media(max-width:560px){
+  .hdr-inner{height:64px;gap:.55rem}
+  .hdr-actions{gap:.3rem}
+  .brand{gap:.5rem}
+  .brand-txt b{font-size:1.06rem}
+  .brand-txt small{display:none}
+  .mark{width:38px;height:38px;border-radius:11px}
+  .icon-btn{width:38px;height:38px;border-radius:11px}
+  .cart-btn{height:38px;padding:0 .65rem;border-radius:11px}
+}
+
+/* ---------------------------------------------------------------- buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.78rem 1.25rem;border-radius:999px;
+     font-weight:600;font-size:.92rem;border:1px solid transparent;transition:.2s;white-space:nowrap;line-height:1}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;box-shadow:0 12px 26px -14px rgba(192,86,31,.95)}
+.btn-primary:hover{filter:brightness(1.05);box-shadow:0 16px 30px -14px rgba(192,86,31,.95)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--bg-2)}
+.btn-soft{background:var(--bg-2);color:var(--ink);border-color:transparent}
+.btn-soft:hover{filter:brightness(.97)}
+.btn-sm{padding:.5rem .85rem;font-size:.8rem}
+.btn-block{width:100%}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.link{font-size:.8rem;font-weight:600;color:var(--brand);padding:.2rem}
+.link:hover{text-decoration:underline}
+.link.danger{color:var(--danger)}
+
+/* ---------------------------------------------------------------- layout */
+section{padding:clamp(3rem,6.5vw,5.25rem) 0;scroll-margin-top:86px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:2rem}
+.eyebrow{display:inline-flex;align-items:center;gap:.55rem;font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brand)}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--brand);opacity:.6}
+h2{font-family:var(--serif);font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:600;margin:.4rem 0 .5rem}
+.sec-head p{color:var(--muted);max-width:52ch;font-size:.95rem;margin:0}
+.count-pill{font-size:.76rem;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:.35rem .8rem;white-space:nowrap}
+
+/* ---------------------------------------------------------------- hero */
+.hero{padding-top:clamp(2rem,5vw,3.5rem);position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:2.5rem;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.76rem;font-weight:600;color:var(--ink-soft,#5B4B3E);
+  background:var(--card);border:1px solid var(--line);padding:.4rem .8rem .4rem .45rem;border-radius:999px;box-shadow:var(--shadow-sm)}
+.hero-badge i{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--brand));display:grid;place-items:center;font-style:normal;font-size:.7rem}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.5rem,6.2vw,4.4rem);line-height:1.02;letter-spacing:-.03em;margin:1.1rem 0 1rem}
+h1 em{font-style:italic;color:var(--brand);position:relative}
+h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.04em;height:.09em;background:var(--gold);opacity:.35;border-radius:2px}
+.hero p.lead{font-size:clamp(1rem,1.4vw,1.1rem);color:var(--muted);max-width:50ch}
+.hero-cta{display:flex;gap:.75rem;flex-wrap:wrap;margin:1.6rem 0 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;border-top:1px solid var(--line);padding-top:1.5rem;margin-top:2.2rem}
+.stat b{display:block;font-family:var(--serif);font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:600;line-height:1.1}
+.stat span{font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+.hero-art{position:relative;min-height:470px;display:grid;place-items:center;isolation:isolate}
+.hero-art .glow{position:absolute;inset:6% 2%;z-index:0;filter:blur(42px);opacity:.85;
+  background:radial-gradient(circle at 62% 38%,rgba(224,138,60,.55),transparent 62%),radial-gradient(circle at 28% 72%,rgba(62,107,79,.38),transparent 60%)}
+.polaroid{position:absolute;z-index:2;width:214px;background:var(--card);border:1px solid var(--line);border-radius:18px;
+  padding:.55rem .55rem .85rem;box-shadow:0 34px 60px -32px rgba(40,20,5,.75);transition:transform .35s ease}
+.polaroid:hover{transform:translateY(-6px) rotate(0deg) !important}
+.polaroid .art{border-radius:12px;aspect-ratio:1/1;display:grid;place-items:center;font-size:3.4rem;
+  background:linear-gradient(150deg,var(--a),var(--b));position:relative;overflow:hidden}
+.polaroid .art::after{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 25% 18%,rgba(255,255,255,.55),transparent 45%),radial-gradient(circle at 80% 85%,rgba(0,0,0,.18),transparent 50%)}
+.polaroid .art span{position:relative;z-index:1;filter:drop-shadow(0 12px 16px rgba(60,30,5,.35))}
+.polaroid .meta{display:flex;justify-content:space-between;align-items:center;gap:.5rem;padding:.55rem .3rem 0;font-size:.75rem;line-height:1.2}
+.polaroid .meta b{font-weight:600}
+.polaroid .meta small{color:var(--muted);font-size:.7rem}
+.polaroid.p1{transform:translate(-72px,-88px) rotate(-7deg)}
+.polaroid.p2{transform:translate(78px,-4px) rotate(7deg);width:186px;z-index:3}
+.polaroid.p3{transform:translate(-24px,128px) rotate(-2deg);width:176px;z-index:1}
+.float-chip{position:absolute;z-index:4;left:0;bottom:8px;display:flex;align-items:center;gap:.5rem;background:var(--card);
+  border:1px solid var(--line);border-radius:999px;padding:.5rem .9rem;font-size:.73rem;font-weight:600;box-shadow:var(--shadow-sm)}
+.float-chip .dot{width:7px;height:7px;border-radius:50%;background:#2F9E63;box-shadow:0 0 0 4px rgba(47,158,99,.18)}
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:1rem}
+  .hero-art{min-height:420px;margin-top:.5rem}
+  .polaroid.p1{transform:translate(-58px,-78px) rotate(-7deg);width:188px}
+  .polaroid.p2{transform:translate(62px,-6px) rotate(7deg);width:164px}
+  .polaroid.p3{transform:translate(-14px,110px) rotate(-2deg);width:156px}
+}
+@media(max-width:560px){
+  .hero-art{min-height:360px}
+  .hero-cta{flex-direction:column;align-items:stretch}
+  .hero-cta .btn{width:100%}
+  .polaroid{width:150px !important}
+  .polaroid .art{font-size:2.5rem}
+  .polaroid.p1{transform:translate(-46px,-64px) rotate(-8deg)}
+  .polaroid.p2{transform:translate(46px,-4px) rotate(8deg)}
+  .polaroid.p3{transform:translate(-10px,86px) rotate(-2deg)}
+  .float-chip{left:50%;transform:translateX(-50%);bottom:-6px;white-space:nowrap}
+  .stats{grid-template-columns:repeat(2,1fr);gap:1.1rem}
+}
+
+/* ---------------------------------------------------------------- shop */
+.filters{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.7rem}
+.seg{display:inline-flex;gap:.22rem;padding:.28rem;background:var(--bg-2);border:1px solid var(--line);border-radius:999px;flex-wrap:wrap}
+.seg-btn{border:0;background:transparent;color:var(--muted);padding:.45rem .95rem;border-radius:999px;font-size:.84rem;font-weight:600;transition:.18s}
+.seg-btn:hover{color:var(--ink)}
+.seg-btn.is-active{background:var(--card);color:var(--ink);box-shadow:0 2px 10px rgba(0,0,0,.09)}
+.toolbar{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.search{display:flex;align-items:center;gap:.5rem;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.45rem .9rem;min-width:252px}
+.search svg{width:16px;height:16px;color:var(--muted);flex:none}
+.search input{border:0;background:transparent;outline:none;font:inherit;font-size:.87rem;color:var(--ink);width:100%}
+.search input::placeholder{color:var(--muted);opacity:.8}
+select{appearance:none;-webkit-appearance:none;font:inherit;font-size:.84rem;font-weight:500;color:var(--ink);
+  background:var(--card) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right .7rem center/16px;
+  border:1px solid var(--line);border-radius:999px;padding:.55rem 2rem .55rem .95rem;cursor:pointer}
+@media(max-width:640px){
+  .filters{flex-direction:column;align-items:stretch}
+  .seg{justify-content:center}
+  .toolbar{flex-direction:column;align-items:stretch}
+  .search{min-width:0;width:100%}
+  select{width:100%}
+}
+
+.grid-products{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(255px,100%),1fr));gap:1.4rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;
+  box-shadow:var(--shadow-sm);transition:transform .28s ease,box-shadow .28s ease,border-color .28s}
+.card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--brand) 35%,var(--line))}
+.art{position:relative;aspect-ratio:16/11;display:grid;place-items:center;overflow:hidden;
+  background:linear-gradient(150deg,var(--a),var(--b))}
+.art::after{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 22% 18%,rgba(255,255,255,.5),transparent 42%),radial-gradient(circle at 82% 88%,rgba(0,0,0,.16),transparent 55%)}
+.art-emoji{position:relative;z-index:1;font-size:3.8rem;filter:drop-shadow(0 14px 18px rgba(60,30,5,.35));transition:transform .35s}
+.card:hover .art-emoji{transform:scale(1.08) rotate(-3deg)}
+.badge{position:absolute;z-index:2;top:.7rem;left:.7rem;background:rgba(255,253,249,.92);color:#2B2118;font-size:.66rem;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;padding:.28rem .6rem;border-radius:999px;box-shadow:0 4px 12px rgba(0,0,0,.14)}
+.art-tag{position:absolute;z-index:2;bottom:.7rem;right:.7rem;background:rgba(20,14,9,.55);color:#FFF7EC;font-size:.66rem;font-weight:600;
+  padding:.24rem .55rem;border-radius:999px;backdrop-filter:blur(6px)}
+.card-body{padding:1rem 1.05rem 1.1rem;display:flex;flex-direction:column;gap:.55rem;flex:1}
+.card-top{display:flex;justify-content:space-between;gap:.6rem;align-items:flex-start}
+.card-top h3{font-family:var(--serif);font-size:1.12rem;font-weight:600;letter-spacing:-.01em}
+.rate{font-size:.72rem;font-weight:700;color:var(--gold);white-space:nowrap;padding-top:.15rem}
+.desc{font-size:.82rem;color:var(--muted);margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tags{display:flex;gap:.35rem;flex-wrap:wrap}
+.tag{font-size:.66rem;font-weight:600;letter-spacing:.03em;color:var(--green);background:color-mix(in srgb,var(--green) 12%,transparent);
+  border:1px solid color-mix(in srgb,var(--green) 22%,transparent);padding:.18rem .5rem;border-radius:999px}
+[data-theme="dark"] .tag{color:var(--green);background:rgba(140,187,152,.1)}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:.6rem;margin-top:auto;padding-top:.6rem}
+.price{font-family:var(--serif);font-size:1.18rem;font-weight:600}
+.price small{font-family:var(--sans);font-size:.66rem;color:var(--muted);font-weight:500;display:block;line-height:1.1;margin-top:-2px}
+.card-actions{display:flex;align-items:center;gap:.3rem}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:3rem 1rem;border:1px dashed var(--line);border-radius:var(--radius)}
+
+/* ---------------------------------------------------------------- recipes */
+.recipes{background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--bg-2) 60%,transparent) 18%,color-mix(in srgb,var(--bg-2) 60%,transparent) 82%,transparent)}
+.grid-recipes{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(310px,100%),1fr));gap:1.4rem}
+.recipe-card{text-align:left;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.1rem;
+  display:flex;flex-direction:column;gap:.7rem;box-shadow:var(--shadow-sm);transition:.28s;width:100%}
+.recipe-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.rc-top{display:flex;align-items:center;gap:.7rem}
+.rc-emoji{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:1.6rem;flex:none;
+  background:linear-gradient(145deg,var(--a),var(--b));box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.rc-top h3{font-family:var(--serif);font-size:1.1rem;font-weight:600}
+.rc-top small{color:var(--muted);font-size:.74rem}
+.recipe-card p{font-size:.82rem;color:var(--muted);margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.rc-meta{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:auto;padding-top:.2rem}
+.pill{font-size:.68rem;font-weight:600;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:.2rem .55rem}
+.rc-open{margin-top:.35rem;font-size:.78rem;font-weight:700;color:var(--brand);display:flex;align-items:center;gap:.3rem}
+
+/* ---------------------------------------------------------------- bakers */
+.grid-bakers{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:1.4rem}
+.baker{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem;box-shadow:var(--shadow-sm);
+  position:relative;overflow:hidden;transition:.28s;display:flex;flex-direction:column}
+.baker:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.baker::before{content:"";position:absolute;inset:0 0 auto;height:96px;background:linear-gradient(120deg,var(--t1),var(--t2));opacity:.16}
+.avatar{width:74px;height:74px;border-radius:22px;display:grid;place-items:center;font-family:var(--serif);font-size:1.5rem;font-weight:600;
+  color:#FFF8EE;background:linear-gradient(145deg,var(--t1),var(--t2));box-shadow:0 16px 30px -16px rgba(0,0,0,.6);position:relative}
+.baker h3{font-family:var(--serif);font-size:1.22rem;font-weight:600;margin-top:.9rem}
+.role{font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--brand);margin:.15rem 0 .6rem}
+.baker p{font-size:.84rem;color:var(--muted);margin:0 0 .8rem}
+.baker .tags{margin-bottom:.9rem}
+.sig{display:flex;justify-content:space-between;align-items:center;gap:.6rem;border-top:1px solid var(--line);padding-top:.8rem;font-size:.76rem;margin-top:auto}
+.sig span{color:var(--muted)}
+.sig b{font-weight:600}
+.years{position:absolute;top:1.15rem;right:1.15rem;font-size:.68rem;font-weight:700;color:var(--muted);background:var(--card);
+  border:1px solid var(--line);padding:.25rem .55rem;border-radius:999px}
+
+/* ---------------------------------------------------------------- visit */
+.visit-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:1.4rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.3rem,3vw,2rem);box-shadow:var(--shadow-sm)}
+.panel h3{font-family:var(--serif);font-size:1.35rem;font-weight:600;margin-bottom:.3rem}
+.hours{list-style:none;margin-top:1rem;display:grid;gap:.1rem}
+.hours li{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-bottom:1px dashed var(--line);font-size:.86rem}
+.hours li:last-child{border-bottom:0}
+.hours li b{font-weight:600}
+.hours .closed{color:var(--danger);font-weight:600}
+.addr{margin-top:1.2rem;font-size:.86rem;color:var(--muted);line-height:1.7}
+.addr b{color:var(--ink);font-weight:600;display:block;font-size:.95rem;margin-bottom:.1rem}
+.newsletter p{font-size:.85rem;color:var(--muted)}
+.field{display:grid;gap:.32rem}
+.field label{font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+input,textarea,select{font-family:inherit}
+.field input,.field textarea{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:12px;padding:.7rem .85rem;font-size:.9rem;width:100%;transition:.18s}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 16%,transparent)}
+.inline-form{display:flex;gap:.5rem;margin-top:.9rem}
+.inline-form input{flex:1;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:.72rem 1rem;font-size:.87rem;min-width:0}
+.inline-form input:focus{outline:none;border-color:var(--brand)}
+@media(max-width:820px){.visit-grid{grid-template-columns:1fr}}
+
+/* ---------------------------------------------------------------- footer */
+footer{border-top:1px solid var(--line);background:var(--bg-2);padding:3rem 0 1.5rem;margin-top:1rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem}
+.foot-brand p{font-size:.84rem;color:var(--muted);max-width:34ch;margin-top:.8rem}
+footer h4{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.8rem}
+footer ul{list-style:none;display:grid;gap:.45rem;font-size:.85rem}
+footer ul a{color:var(--ink);opacity:.82}
+footer ul a:hover{opacity:1;color:var(--brand)}
+.foot-bottom{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:2.5rem;padding-top:1.2rem;font-size:.76rem;color:var(--muted)}
+@media(max-width:820px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.foot-grid{grid-template-columns:1fr}}
+
+/* ---------------------------------------------------------------- overlays */
+.scrim{position:fixed;inset:0;background:rgba(14,9,4,.52);backdrop-filter:blur(4px);z-index:80;opacity:0;transition:opacity .25s}
+.scrim.show{opacity:1}
+.drawer{position:fixed;top:0;right:0;height:100dvh;width:min(432px,100%);background:var(--card);z-index:90;display:flex;flex-direction:column;
+  transform:translateX(103%);transition:transform .34s cubic-bezier(.4,0,.2,1);border-left:1px solid var(--line);border-radius:24px 0 0 24px;box-shadow:-30px 0 60px -30px rgba(0,0,0,.5)}
+.drawer.open{transform:none}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.2rem 1.25rem .9rem;border-bottom:1px solid var(--line)}
+.drawer-head h3{font-family:var(--serif);font-size:1.3rem;font-weight:600}
+.drawer-head small{display:block;font-size:.72rem;color:var(--muted);font-weight:400;letter-spacing:.02em}
+.drawer-body{flex:1;overflow-y:auto;padding:1rem 1.25rem;display:flex;flex-direction:column;gap:.9rem;overscroll-behavior:contain}
+.drawer-foot{padding:1rem 1.25rem calc(1rem + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:var(--card)}
+.cart-row{display:flex;gap:.75rem;align-items:flex-start;padding-bottom:.9rem;border-bottom:1px solid var(--line)}
+.thumb{width:58px;height:58px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;flex:none;background:linear-gradient(150deg,var(--a),var(--b))}
+.cr-main{flex:1;min-width:0}
+.cr-main b{display:block;font-size:.88rem;font-weight:600;line-height:1.3}
+.cr-main>span{font-size:.74rem;color:var(--muted);display:block;margin-top:.1rem}
+.cr-right{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:.25rem;flex:none}
+.cr-right b{font-size:.86rem;font-weight:600}
+.qty{display:inline-flex;align-items:center;gap:.1rem;margin-top:.45rem;border:1px solid var(--line);border-radius:999px;padding:.1rem}
+.qty button{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:.9rem;font-weight:600;line-height:1;color:var(--ink)}
+.qty button:hover{background:var(--bg-2)}
+.qty span{min-width:22px;text-align:center;font-size:.8rem;font-weight:600}
+.cart-empty{text-align:center;padding:2.5rem 1rem;color:var(--muted)}
+.cart-empty .big{font-size:2.6rem;margin-bottom:.6rem}
+.ship-bar{font-size:.74rem;color:var(--muted);margin-bottom:.9rem}
+.ship-track{height:6px;border-radius:999px;background:var(--bg-2);margin-top:.4rem;overflow:hidden}
+.ship-fill{height:100%;background:linear-gradient(90deg,var(--brand),var(--gold));border-radius:999px;transition:width .4s}
+.promo{display:flex;gap:.4rem;margin-bottom:.9rem}
+.promo input{flex:1;min-width:0;border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:.6rem .75rem;font-size:.82rem;color:var(--ink)}
+.promo input:focus{outline:none;border-color:var(--brand)}
+.promo-msg{font-size:.74rem;margin:-.5rem 0 .8rem}
+.promo-msg.ok{color:var(--ok)} .promo-msg.err{color:var(--danger)}
+.totals{display:grid;gap:.4rem;margin:0 0 .8rem;font-size:.85rem}
+.totals>div{display:flex;justify-content:space-between;gap:1rem}
+.totals dt,.totals dd{margin:0}
+.totals dd{font-weight:600;font-variant-numeric:tabular-nums}
+.totals .disc dd{color:var(--ok)}
+.totals .grand{border-top:1px solid var(--line);padding-top:.6rem;margin-top:.25rem;font-size:1.02rem}
+.totals .grand dt{font-weight:600}
+.totals .grand dd{font-family:var(--serif);font-size:1.25rem}
+.fineprint{font-size:.68rem;color:var(--muted);text-align:center;margin:.7rem 0 0;line-height:1.5}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:95;display:grid;place-items:center;padding:1rem;opacity:0;pointer-events:none;transition:opacity .22s}
+.modal.open{opacity:1;pointer-events:auto}
+.modal-card{width:min(760px,100%);max-height:min(90dvh,940px);overflow-y:auto;background:var(--card);border:1px solid var(--line);
+  border-radius:26px;box-shadow:0 40px 100px -40px rgba(0,0,0,.7);transform:translateY(16px) scale(.99);transition:.26s;overscroll-behavior:contain}
+.modal.open .modal-card{transform:none}
+.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;padding:1.4rem 1.5rem .9rem;position:sticky;top:0;
+  background:color-mix(in srgb,var(--card) 94%,transparent);backdrop-filter:blur(10px);z-index:2;border-bottom:1px solid transparent}
+.modal-head h3{font-family:var(--serif);font-size:1.5rem;font-weight:600;margin-top:.15rem}
+.modal-body{padding:.4rem 1.5rem 1.4rem}
+.modal-foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 1.5rem calc(1.2rem + env(safe-area-inset-bottom));
+  border-top:1px solid var(--line);background:var(--card);position:sticky;bottom:0;flex-wrap:wrap}
+.close-modal{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--bg-2);flex:none;font-size:1rem}
+.close-modal:hover{background:var(--line)}
+.total-badge{font-size:.8rem;color:var(--muted)}
+.total-badge b{font-family:var(--serif);font-size:1.2rem;color:var(--ink);margin-left:.35rem}
+
+/* recipe modal */
+.r-hero{display:flex;gap:1rem;align-items:center;margin-bottom:1rem}
+.r-hero .rc-emoji{width:64px;height:64px;font-size:2rem;border-radius:18px}
+.r-hero small{color:var(--muted);font-size:.78rem}
+.r-cols{display:grid;grid-template-columns:1fr 1.4fr;gap:1.6rem}
+@media(max-width:680px){.r-cols{grid-template-columns:1fr}}
+.r-cols h4,.steps h4{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--brand);margin-bottom:.6rem;font-weight:700}
+.ing{list-style:none;display:grid;gap:.45rem;font-size:.86rem}
+.ing li{display:flex;gap:.6rem;align-items:flex-start;padding:.4rem .55rem;border-radius:10px;background:var(--bg-2)}
+.ing input{accent-color:var(--brand);margin-top:.2rem;width:15px;height:15px;flex:none}
+.ing input:checked + span{text-decoration:line-through;opacity:.55}
+.steps{list-style:none;counter-reset:s;display:grid;gap:.7rem}
+.steps li{counter-increment:s;position:relative;padding-left:2.1rem;font-size:.87rem;line-height:1.55}
+.steps li::before{content:counter(s);position:absolute;left:0;top:-.05rem;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;
+  background:var(--brand);color:#fff;font-size:.72rem;font-weight:700}
+.tip{border-left:3px solid var(--gold);background:color-mix(in srgb,var(--gold) 12%,transparent);border-radius:0 12px 12px 0;
+  padding:.75rem .9rem;font-size:.83rem;margin-top:1.2rem}
+.tip b{display:block;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--brand-ink);margin-bottom:.2rem}
+
+/* checkout forms */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.span2{grid-column:1/-1}
+@media(max-width:600px){.form-grid{grid-template-columns:1fr}}
+.alert{font-size:.8rem;color:var(--danger);background:color-mix(in srgb,var(--danger) 10%,transparent);
+  border:1px solid color-mix(in srgb,var(--danger) 25%,transparent);padding:.6rem .8rem;border-radius:10px;margin-top:.9rem}
+.method-tabs{margin:.2rem 0 1.1rem;width:100%;display:flex}
+.method-tabs .seg-btn{flex:1;padding:.6rem .4rem;font-size:.84rem;display:flex;align-items:center;justify-content:center;gap:.35rem}
+.pay-note{font-size:.8rem;color:var(--muted);margin-bottom:1rem}
+.card-preview{background:linear-gradient(140deg,#2A2019,#4A3525);color:#FFF4E4;border-radius:18px;padding:1rem 1.2rem;margin-bottom:1.1rem;
+  box-shadow:0 20px 40px -24px rgba(0,0,0,.8);position:relative;overflow:hidden}
+.card-preview::after{content:"";position:absolute;right:-30px;top:-30px;width:130px;height:130px;border-radius:50%;background:rgba(240,138,69,.25);filter:blur(6px)}
+.card-preview .chip{width:34px;height:24px;border-radius:6px;background:linear-gradient(135deg,#E9C88A,#B98F45);margin-bottom:1.4rem}
+.card-preview .num{font-family:ui-monospace,monospace;font-size:1.05rem;letter-spacing:.12em;margin-bottom:.7rem;opacity:.95}
+.card-preview .row{display:flex;justify-content:space-between;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;opacity:.75}
+.assets{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-bottom:1.1rem}
+.asset{display:flex;align-items:center;gap:.55rem;border:1px solid var(--line);background:var(--bg);border-radius:14px;padding:.6rem .7rem;text-align:left;transition:.18s}
+.asset:hover{border-color:color-mix(in srgb,var(--brand) 45%,var(--line))}
+.asset.is-active{border-color:var(--brand);background:color-mix(in srgb,var(--brand) 9%,var(--card));box-shadow:0 0 0 3px color-mix(in srgb,var(--brand) 12%,transparent)}
+.asset-ico{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:.9rem;font-weight:800;background:var(--bg-2);flex:none}
+.asset b{font-size:.8rem;display:block;line-height:1.1}
+.asset small{font-size:.64rem;color:var(--muted);display:block;line-height:1.2}
+@media(max-width:480px){.assets{grid-template-columns:1fr}}
+.invoice{border:1px dashed color-mix(in srgb,var(--brand) 45%,var(--line));border-radius:18px;padding:1rem;background:var(--bg)}
+.inv-top{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.qr{width:118px;height:118px;background:#fff;border-radius:12px;padding:5px;flex:none;box-shadow:0 6px 18px rgba(0,0,0,.14)}
+.qr svg{width:100%;height:100%;display:block}
+.inv-info{flex:1;min-width:0}
+.inv-info .amt{font-family:var(--serif);font-size:1.5rem;font-weight:600;line-height:1.1}
+.inv-info .inr{font-size:.78rem;color:var(--muted);margin-bottom:.5rem}
+.inv-addr{display:flex;gap:.4rem;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:.4rem .5rem;font-size:.7rem}
+.inv-addr code{font-family:ui-monospace,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1;min-width:0}
+.inv-addr button{font-size:.66rem;font-weight:700;color:var(--brand);flex:none}
+.inv-foot{display:flex;justify-content:space-between;align-items:center;gap:.6rem;margin-top:.8rem;flex-wrap:wrap;font-size:.72rem;color:var(--muted)}
+.timer{display:inline-flex;align-items:center;gap:.35rem;font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink);
+  background:var(--card);border:1px solid var(--line);padding:.22rem .55rem;border-radius:999px;font-size:.74rem}
+.timer.expired{color:var(--danger);border-color:var(--danger)}
+.demo-tag{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--brand);
+  background:color-mix(in srgb,var(--brand) 12%,transparent);padding:.18rem .45rem;border-radius:5px}
+.processing{text-align:center;padding:2.4rem 1.5rem}
+.spinner{width:52px;height:52px;border-radius:50%;border:3px solid var(--line);border-top-color:var(--brand);margin:0 auto 1.2rem;animation:spin .9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.processing h3{font-family:var(--serif);font-size:1.3rem;font-weight:600}
+.log{list-style:none;text-align:left;max-width:320px;margin:1.2rem auto 0;display:grid;gap:.5rem;font-size:.8rem;color:var(--muted)}
+.log li{display:flex;gap:.5rem;align-items:center;animation:fadeUp .3s both}
+.log li::before{content:"✓";color:var(--ok);font-weight:800;font-size:.8rem}
+@keyframes fadeUp{from{opacity:0;transform:translateY(4px)}}
+.success{text-align:center;padding:2rem 1.5rem 1.6rem}
+.check{width:64px;height:64px;border-radius:50%;background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok);
+  display:grid;place-items:center;margin:0 auto 1rem;font-size:1.9rem;animation:pop .45s cubic-bezier(.2,1.4,.5,1)}
+@keyframes pop{from{transform:scale(.5);opacity:0}}
+.success h3{font-family:var(--serif);font-size:1.55rem;font-weight:600;margin-bottom:.35rem}
+.success .oid{font-family:ui-monospace,monospace;font-size:.8rem;color:var(--muted);letter-spacing:.06em;margin-bottom:.9rem}
+.receipt{text-align:left;background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:.85rem 1rem;font-size:.8rem;margin:1rem 0;display:grid;gap:.35rem}
+.receipt div{display:flex;justify-content:space-between;gap:1rem}
+.receipt span:last-child{font-weight:600}
+
+/* toasts */
+#toasts{position:fixed;top:calc(86px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);z-index:120;display:grid;gap:.5rem;
+  width:min(360px,calc(100vw - 2rem));pointer-events:none}
+.toast{display:flex;align-items:center;gap:.6rem;background:var(--ink);color:var(--bg);padding:.7rem .9rem;border-radius:14px;
+  font-size:.82rem;font-weight:500;box-shadow:0 18px 40px -18px rgba(0,0,0,.7);animation:toastIn .3s cubic-bezier(.2,1.2,.4,1);line-height:1.35}
+.toast>span:first-child{width:20px;height:20px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:.7rem;flex:none;font-weight:800}
+.toast.err>span:first-child{background:var(--danger)}
+.toast.out{animation:toastOut .3s forwards}
+@keyframes toastIn{from{opacity:0;transform:translateY(-10px) scale(.97)}}
+@keyframes toastOut{to{opacity:0;transform:translateY(-8px) scale(.97)}}
+
+/* chat */
+.chat-fab{position:fixed;right:1.15rem;bottom:calc(1.15rem + env(safe-area-inset-bottom));z-index:70;width:60px;height:60px;border-radius:50%;
+  display:grid;place-items:center;background:linear-gradient(140deg,var(--brand),var(--brand-2));color:#fff;
+  box-shadow:0 18px 34px -14px rgba(192,86,31,.85);transition:.22s}
+.chat-fab:hover{transform:translateY(-2px) scale(1.03)}
+.chat-fab svg{width:26px;height:26px}
+.chat-fab .ping{position:absolute;top:-3px;right:-3px;width:14px;height:14px;border-radius:50%;background:var(--gold);border:2px solid var(--bg);animation:ping 2.4s infinite}
+@keyframes ping{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+.chat-panel{position:fixed;right:1.15rem;bottom:calc(5.9rem + env(safe-area-inset-bottom));width:min(388px,calc(100vw - 2rem));
+  height:min(575px,calc(100dvh - 8rem));background:var(--card);border:1px solid var(--line);border-radius:24px;
+  display:flex;flex-direction:column;overflow:hidden;z-index:71;box-shadow:0 40px 90px -30px rgba(0,0,0,.7);
+  opacity:0;transform:translateY(14px) scale(.98);pointer-events:none;transition:.26s cubic-bezier(.4,0,.2,1);
+  padding:0;margin:0;scroll-margin:0}
+.chat-panel.open{opacity:1;transform:none;pointer-events:auto}
+.chat-head{display:flex;align-items:center;gap:.7rem;padding:.85rem 1rem;border-bottom:1px solid var(--line);
+  background:linear-gradient(120deg,color-mix(in srgb,var(--brand) 12%,var(--card)),var(--card))}
+.chat-avatar{width:40px;height:40px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(145deg,var(--brand),var(--brand-2));font-size:1.15rem;flex:none}
+.chat-head b{font-size:.9rem;display:block;line-height:1.2}
+.chat-head small{font-size:.68rem;color:var(--muted);display:flex;align-items:center;gap:.3rem}
+.live{width:6px;height:6px;border-radius:50%;background:#2F9E63;display:inline-block}
+.chat-log{flex:1;overflow-y:auto;padding:1rem;display:flex;flex-direction:column;gap:.6rem;overscroll-behavior:contain;scroll-behavior:smooth}
+.msg{max-width:88%;padding:.65rem .85rem;border-radius:16px;font-size:.84rem;line-height:1.5;animation:msgIn .25s}
+.msg p{margin:0 0 .45rem}
+.msg p:last-child{margin-bottom:0}
+.msg.user{align-self:flex-end;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;border-bottom-right-radius:5px}
+.msg.bot{align-self:flex-start;background:var(--bg-2);border-bottom-left-radius:5px}
+.msg b{font-weight:700}
+.msg .mini{display:flex;gap:.5rem;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.4rem .5rem;margin-top:.5rem}
+.mini-art{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-size:1.15rem;background:linear-gradient(150deg,var(--a),var(--b));flex:none}
+.mini-main{flex:1;min-width:0;line-height:1.25}
+.mini-main b{display:block;font-size:.76rem}
+.mini-main small{font-size:.68rem;color:var(--muted)}
+.msg .chips{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.55rem}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:.32rem .62rem;font-size:.7rem;font-weight:600;transition:.15s;text-align:left}
+.chip:hover{border-color:var(--brand);color:var(--brand)}
+.typing{display:flex;gap:3px;padding:.85rem 1rem;background:var(--bg-2);border-radius:16px;border-bottom-left-radius:5px;width:max-content}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:blink 1.2s infinite}
+.typing i:nth-child(2){animation-delay:.15s}
+.typing i:nth-child(3){animation-delay:.3s}
+@keyframes blink{0%,60%,100%{opacity:.25;transform:translateY(0)}30%{opacity:1;transform:translateY(-2px)}}
+@keyframes msgIn{from{opacity:0;transform:translateY(6px)}}
+.chat-form{display:flex;gap:.45rem;padding:.7rem .8rem calc(.7rem + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:var(--card)}
+.chat-form input{flex:1;min-width:0;border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:.62rem .95rem;font-size:.84rem;color:var(--ink)}
+.chat-form input:focus{outline:none;border-color:var(--brand)}
+.chat-send{width:40px;height:40px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;flex:none;transition:.18s}
+.chat-send:hover{filter:brightness(1.1)}
+.chat-send svg{width:17px;height:17px}
+@media(max-width:520px){
+  .chat-panel{left:.7rem;right:.7rem;bottom:calc(5.6rem + env(safe-area-inset-bottom));width:auto;height:min(74dvh,600px);border-radius:20px}
+  .chat-fab{width:54px;height:54px;right:.9rem}
+  .drawer{width:100%;border-radius:0;border-left:0}
+  #toasts{top:calc(74px + env(safe-area-inset-top))}
+}
+
+/* reveal */
+.ing label{display:flex;gap:.6rem;align-items:flex-start;cursor:pointer;width:100%;line-height:1.45}
+.ing li{padding:.5rem .6rem}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important;scroll-behavior:auto !important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#shop">Skip to the bake counter</a>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Baked before sunrise</span><span>Bandra West, Bogota - D.C.</span><span>Free delivery over ₹999</span><span>Naturally leavened · 36-hour ferment</span><span>Card · UPI · Crypto</span>
+    <span>Baked before sunrise</span><span>Bandra West, Bogota - D.C.</span><span>Free delivery over ₹999</span><span>Naturally leavened · 36-hour ferment</span><span>Card · UPI · Crypto</span>
+  </div>
+</div>
+
+<header class="hdr">
+  <div class="hdr-inner wrap">
+    <a class="brand" href="#top" aria-label="La Baguetta Bogota - city, back to top">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 21V9"/><path d="M12 9c0-3 2-5 5-5 0 3-2 5-5 5Z"/><path d="M12 9C12 6 10 4 7 4c0 3 2 5 5 5Z"/>
+          <path d="M12 15c0-2.5 1.7-4.2 4.2-4.2 0 2.5-1.7 4.2-4.2 4.2Z"/><path d="M12 15c0-2.5-1.7-4.2-4.2-4.2 0 2.5 1.7 4.2 4.2 4.2Z"/>
+        </svg>
+      </span>
+      <span class="brand-txt"><b>La Baguetta</b><small>Bogota - city · Bogota - D.C.</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="#shop">Shop</a>
+      <a href="#recipes">Bakebook</a>
+      <a href="#bakers">Bakers</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="hdr-actions">
+      <button class="icon-btn" data-action="theme" aria-label="Switch colour theme" title="Switch theme">
+        <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+          <circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/>
+        </svg>
+      </button>
+      <button class="cart-btn" data-action="open-cart" aria-label="Open shopping bag">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+        </svg>
+        <span class="label">Bag</span>
+        <span class="count hide" id="cartCount">0</span>
+      </button>
+      <button class="icon-btn nav-toggle" data-action="toggle-nav" aria-label="Open menu" aria-expanded="false" aria-controls="nav" id="navBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ------------------------------------------------------------ hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-badge"><i>✦</i> Baked before sunrise, since 2014</span>
+        <h1>Slow bread &amp; <em>proper</em> tarts.</h1>
+        <p class="lead">A two-oven Bogota - city in Bandra West. Naturally leavened loaves, hand-laminated viennoiserie and tarts built on real fruit — in the oven at 5:30 am, at your door by 10.</p>
+        <div class="hero-cta">
+          <button class="btn btn-primary" data-action="goto" data-target="#shop">
+            Shop the counter
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <button class="btn btn-ghost" data-action="goto" data-target="#bakers">Meet the bakers</button>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>12 yrs</b><span>Same starter</span></div>
+          <div class="stat"><b>340+</b><span>Loaves a day</span></div>
+          <div class="stat"><b>4.9 / 5</b><span>1,800 reviews</span></div>
+          <div class="stat"><b>2 hrs</b><span>Delivery slots</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="glow"></div>
+        <article class="polaroid p1">
+          <div class="art" style="--a:#EBCB9E;--b:#B9773B"><span>🍞</span></div>
+          <div class="meta"><b>Country Sourdough</b><small>₹380</small></div>
+        </article>
+        <article class="polaroid p2">
+          <div class="art" style="--a:#F1D9B4;--b:#D79B57"><span>🥐</span></div>
+          <div class="meta"><b>Butter Croissant</b><small>₹180</small></div>
+        </article>
+        <article class="polaroid p3">
+          <div class="art" style="--a:#EFD9A8;--b:#C08B3E"><span>🥧</span></div>
+          <div class="meta"><b>Frangipane Tart</b><small>₹440</small></div>
+        </article>
+        <div class="float-chip"><span class="dot"></span> Ovens on · 5:30 am</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------ shop -->
+  <section id="shop">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="eyebrow">The counter</span>
+          <h2>Today's bake</h2>
+          <p>Everything is mixed, shaped and baked in-house. Breads leave the oven twice a day; tarts are glazed at 8 am sharp.</p>
+        </div>
+        <span class="count-pill" id="prodCount">12 items</span>
+      </div>
+
+      <div class="filters reveal">
+        <div class="seg" id="filterRow" role="group" aria-label="Filter by category">
+          <button class="seg-btn is-active" data-action="filter" data-cat="all">All bakes</button>
+          <button class="seg-btn" data-action="filter" data-cat="bread">Breads</button>
+          <button class="seg-btn" data-action="filter" data-cat="dessert">Desserts</button>
+          <button class="seg-btn" data-action="filter" data-cat="tarta">Tartas</button>
+        </div>
+        <div class="toolbar">
+          <label class="search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <input id="searchInput" type="search" placeholder="Search bakes &amp; tarts…" aria-label="Search products">
+          </label>
+          <select id="sortSelect" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+            <option value="rating">Top rated</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid-products" id="productGrid"></div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------ recipes -->
+  <section class="recipes" id="recipes">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="eyebrow">The bakebook</span>
+          <h2>Recipes from our bench</h2>
+          <p>Our local knowledge base, written the way we actually work: weights, timings and the bits that usually go wrong. Tap any card for the full method.</p>
+        </div>
+        <button class="btn btn-soft" data-action="open-chat" data-q="How do you bake sourdough?">Ask Crumb about a recipe</button>
+      </div>
+      <div class="grid-recipes" id="recipeGrid"></div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------ bakers -->
+  <section id="bakers">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="eyebrow">The hands</span>
+          <h2>Three bakers, one starter</h2>
+          <p>Twelve years on, the same levain still wakes up every morning at 4:40. These are the people it wakes up for.</p>
+        </div>
+        <span class="count-pill">Bandra kitchen · 14 Chapel Road</span>
+      </div>
+      <div class="grid-bakers" id="bakerGrid"></div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------ visit -->
+  <section id="visit">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="eyebrow">Visit</span>
+          <h2>Come for the smell alone</h2>
+          <p>We are a takeaway counter with six stools, a very good chai and no wifi password — you are meant to talk.</p>
+        </div>
+      </div>
+      <div class="visit-grid">
+        <div class="panel reveal">
+          <h3>La Baguetta Bogota - city</h3>
+          <p class="muted" style="font-size:.84rem;margin:0">Bandra West, Bogota - D.C.</p>
+          <ul class="hours">
+            <li><b>Tuesday – Friday</b><span>7:00 am – 8:30 pm</span></li>
+            <li><b>Saturday – Sunday</b><span>7:00 am – 9:00 pm</span></li>
+            <li><b>Monday</b><span class="closed">Closed · starter rest day</span></li>
+            <li><b>Fresh bakes</b><span>10:30 am &amp; 4:30 pm</span></li>
+          </ul>
+          <div class="addr">
+            <b>14 Chapel Road, off Carter Road</b>
+            Bandra West, Bogota - D.C. 400050 · Landmark: opposite the old Parsi dairy<br>
+            <a href="tel:+912266001234" style="color:var(--brand);font-weight:600">+91 22 6600 1234</a> ·
+            <a href="mailto:hello@La BaguettaBogota - city.in" style="color:var(--brand);font-weight:600">hello@La BaguettaBogota - city.in</a>
+          </div>
+        </div>
+        <div class="panel newsletter reveal">
+          <h3>The 5:30 Letter</h3>
+          <p>One email on Fridays: what is baking, what sold out, and one recipe from the bench. No more than that.</p>
+          <form id="newsForm" novalidate>
+            <div class="field">
+              <label for="newsEmail">Email address</label>
+              <input id="newsEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+            <div class="inline-form" style="margin-top:.8rem">
+              <button class="btn btn-primary btn-block" type="submit">Send me the letter</button>
+            </div>
+          </form>
+          <p class="fineprint" style="text-align:left;margin-top:.9rem">Demo site — nothing is really sent, and nothing leaves your browser.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top" style="margin:0">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 21V9"/><path d="M12 9c0-3 2-5 5-5 0 3-2 5-5 5Z"/><path d="M12 9C12 6 10 4 7 4c0 3 2 5 5 5Z"/>
+              <path d="M12 15c0-2.5 1.7-4.2 4.2-4.2 0 2.5-1.7 4.2-4.2 4.2Z"/><path d="M12 15c0-2.5-1.7-4.2-4.2-4.2 0 2.5 1.7 4.2 4.2 4.2Z"/>
+            </svg>
+          </span>
+          <span class="brand-txt"><b>La Baguetta</b><small>Bogota - city · Bogota - D.C.</small></span>
+        </a>
+        <p>Slow-fermented bread, laminated pastry and tarts with a Bandra accent. Baked daily, sold till we run out.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#shop">Breads</a></li>
+          <li><a href="#shop">Desserts</a></li>
+          <li><a href="#shop">Tartas</a></li>
+          <li><a href="#visit">Corporate gifting</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Bakebook</h4>
+        <ul>
+          <li><a href="#recipes">Sourdough method</a></li>
+          <li><a href="#recipes">Lamination</a></li>
+          <li><a href="#recipes">Tart shells</a></li>
+          <li><button class="link" style="padding:0;color:inherit;opacity:.82;font-size:inherit" data-action="open-chat" data-q="Do you run baking classes?">Baking classes</button></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><button class="link" style="padding:0;color:inherit;opacity:.82;font-size:inherit" data-action="open-chat" data-q="How does crypto checkout work?">Crypto checkout</button></li>
+          <li><button class="link" style="padding:0;color:inherit;opacity:.82;font-size:inherit" data-action="open-chat" data-q="What are your delivery slots?">Delivery &amp; slots</button></li>
+          <li><button class="link" style="padding:0;color:inherit;opacity:.82;font-size:inherit" data-action="open-chat" data-q="Do you have gluten-free bakes?">Allergens</button></li>
+          <li><a href="#visit">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> La Baguetta Bogota - city · A demo project, not a real store.</span>
+      <span>Crafted with flour, butter and vanilla JavaScript.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ---------------------------------------------------------- cart drawer -->
+<aside class="drawer" id="cart" aria-hidden="true" aria-label="Shopping bag">
+  <div class="drawer-head">
+    <div>
+      <h3>Your bag</h3>
+      <small id="cartSub">Baked fresh, delivered today</small>
+    </div>
+    <button class="close-modal" data-action="close-cart" aria-label="Close bag">✕</button>
+  </div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-foot" id="cartFoot"></div>
+</aside>
+
+<!-- ---------------------------------------------------------------- modal -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
+  <div class="modal-card" id="modalCard"></div>
+</div>
+
+<div class="scrim" id="scrim" hidden></div>
+<div id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+<!-- ----------------------------------------------------------------- chat -->
+<div class="chat" id="chatWrap">
+  <button class="chat-fab" id="chatFab" data-action="toggle-chat" aria-expanded="false" aria-controls="chatPanel" aria-label="Open Crumb, the Bogota - city assistant">
+    <span class="ping" aria-hidden="true"></span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.4-.7L3 21l1.8-5.4A8.4 8.4 0 1 1 21 11.5Z"/>
+      <circle cx="8.5" cy="11.5" r=".9" fill="currentColor" stroke="none"/><circle cx="12.5" cy="11.5" r=".9" fill="currentColor" stroke="none"/><circle cx="16.5" cy="11.5" r=".9" fill="currentColor" stroke="none"/>
+    </svg>
+  </button>
+
+  <section class="chat-panel" id="chatPanel" aria-label="Crumb assistant" aria-hidden="true">
+    <div class="chat-head">
+      <div class="chat-avatar" aria-hidden="true">🥖</div>
+      <div style="flex:1;min-width:0">
+        <b>Crumb</b>
+        <small><span class="live"></span> <span id="kbMeta">Local bakebook</span></small>
+      </div>
+      <button class="icon-btn" data-action="toggle-chat" data-force="0" aria-label="Close chat" style="width:34px;height:34px;border-radius:50%">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="chat-log" id="chatLog" role="log" aria-live="polite"></div>
+    <form class="chat-form" id="chatForm">
+      <input id="chatInput" type="text" placeholder="Ask about a bake, recipe or payment…" autocomplete="off" aria-label="Message Crumb">
+      <button class="chat-send" type="submit" aria-label="Send message">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 16-8-6 16-2.6-6.4L4 12Z"/></svg>
+      </button>
+    </form>
+  </section>
+</div>
+
+<script>
+'use strict';
+
+/* =====================================================================
+   1. CONFIG + LOCAL KNOWLEDGE BASE DATA
+   Everything lives in this file. No network calls, no tracking.
+   ===================================================================== */
+const CONFIG = {
+  inrPerUsd: 83.2,
+  freeDeliveryOver: 999,
+  deliveryFee: 59,
+  promo: { code: 'La Baguetta10', pct: 10 }
+};
+
+const ASSETS = {
+  BTC:  { name: 'Bitcoin',  icon: '₿', net: 'Bitcoin network', rate: 96500, dec: 8, prefix: 'bc1q', len: 34 },
+  ETH:  { name: 'Ethereum', icon: 'Ξ', net: 'ERC-20',          rate: 3180,  dec: 6, prefix: '0x',   len: 38 },
+  USDT: { name: 'Tether',   icon: '₮', net: 'TRC-20',          rate: 1,     dec: 2, prefix: 'T',    len: 34 }
+};
+
+const PRODUCTS = [
+  { id:'p1', name:'Country Sourdough', cat:'bread', emoji:'🍞', price:380, weight:'800 g loaf', rating:4.9, reviews:214,
+    tags:['Vegan','36 h ferment'], badge:'Bestseller',
+    desc:'Crackling mahogany crust, open crumb and a gentle yoghurt tang. Baked in a cast-iron dutch oven at 250°C.',
+    allergens:'Gluten. Baked in a kitchen that also handles dairy, eggs, nuts and sesame.',
+    ingredients:'Stone-ground wheat flour, water, sea salt, wild starter.',
+    art:['#EBCB9E','#B9773B'], aliases:['sourdough','boule','country loaf','country'], recipeId:'r1' },
+
+  { id:'p2', name:'Baguette Tradition', cat:'bread', emoji:'🥖', price:240, weight:'280 g', rating:4.8, reviews:156,
+    tags:['Vegan','24 h cold ferment'],
+    desc:'Crisp, shattery crust with a honeycomb interior. Point it at a bowl of chai and it disappears.',
+    allergens:'Gluten.', ingredients:'Wheat flour, water, sea salt, a pinch of yeast.',
+    art:['#F3DFBB','#CE9A55'], aliases:['baguette','tradition'], recipeId:'r2' },
+
+  { id:'p3', name:'Multigrain Harvest', cat:'bread', emoji:'🌾', price:340, weight:'700 g', rating:4.7, reviews:98,
+    tags:['Vegan','Seven grains'],
+    desc:'Seven grains, toasted seeds and a little jaggery. The weekday toast that actually keeps you full.',
+    allergens:'Gluten, sesame. May contain traces of nuts.',
+    ingredients:'Whole wheat, oats, rye, flax, sunflower, sesame, jaggery, salt, starter.',
+    art:['#E4D2A8','#A98547'], aliases:['multigrain','harvest','seeded'], recipeId:null },
+
+  { id:'p4', name:'Butter Croissant', cat:'bread', emoji:'🥐', price:180, weight:'90 g', rating:4.9, reviews:302,
+    tags:['Contains dairy','72 h lamination'], badge:'Saturday favourite',
+    desc:'Twenty-seven layers of cultured butter and a three-day cold proof. Shatters when you look at it.',
+    allergens:'Gluten, dairy (milk).', ingredients:'Wheat flour, cultured butter, milk, sugar, salt, yeast.',
+    art:['#F5DFC0','#D69E5B'], aliases:['croissant','viennoiserie'], recipeId:null },
+
+  { id:'p5', name:'Fig & Rosemary Focaccia', cat:'bread', emoji:'🌿', price:320, weight:'500 g', rating:4.6, reviews:87,
+    tags:['Vegan','Olive oil'],
+    desc:'Dimpled, oily, salty. Black figs and rosemary pressed in before the second rise.',
+    allergens:'Gluten.', ingredients:'Wheat flour, olive oil, water, salt, yeast, figs, rosemary.',
+    art:['#E4D9A9','#9AA95C'], aliases:['focaccia','fig','rosemary'], recipeId:'r6' },
+
+  { id:'p6', name:'Cardamom Honey Babka', cat:'dessert', emoji:'🥨', price:450, weight:'650 g', rating:4.9, reviews:241,
+    tags:['Contains dairy','Contains eggs'], badge:'New',
+    desc:'Enriched dough, cardamom sugar and a honey-butter soak. Pull-apart by design, dangerous by nature.',
+    allergens:'Gluten, dairy, eggs.', ingredients:'Wheat flour, butter, eggs, milk, sugar, cardamom, honey, salt, yeast.',
+    art:['#EFD3A6','#B9854A'], aliases:['babka','cardamom','honey babka'], recipeId:'r3' },
+
+  { id:'p7', name:'Basque Burnt Cheesecake', cat:'dessert', emoji:'🍰', price:520, weight:'6 inch cake', rating:4.8, reviews:189,
+    tags:['Contains eggs','Almost gluten-free'],
+    desc:'Burnt on purpose. Custardy centre, caramelised top, no crust to hide behind.',
+    allergens:'Dairy, eggs. Baked in a shared kitchen, so not certified gluten-free.',
+    ingredients:'Cream cheese, cream, eggs, sugar, a spoon of flour, vanilla.',
+    art:['#F0DDB4','#C99A4E'], aliases:['basque','cheesecake'], recipeId:'r5' },
+
+  { id:'p8', name:'Mawa Cardamom Cake', cat:'dessert', emoji:'🧁', price:260, weight:'2 pieces', rating:4.7, reviews:112,
+    tags:['Contains dairy','Contains eggs'],
+    desc:'Bogota - D.C. in a paper cup: mawa, cardamom and a little too much butter. Chai’s best friend.',
+    allergens:'Gluten, dairy, eggs.', ingredients:'Mawa, butter, sugar, eggs, flour, cardamom, milk.',
+    art:['#F2DEBA','#C08B4E'], aliases:['mawa','cupcake'], recipeId:null },
+
+  { id:'p9', name:'Chocolate Sea-Salt Cookies', cat:'dessert', emoji:'🍪', price:340, weight:'Box of 6', rating:4.8, reviews:132,
+    tags:['Contains dairy','Contains eggs'],
+    desc:'Brown-butter dough, 70% couverture chunks and flaky salt on top. Underbaked in the middle, always.',
+    allergens:'Gluten, dairy, eggs. May contain nuts.',
+    ingredients:'Wheat flour, butter, brown sugar, dark chocolate, eggs, sea salt.',
+    art:['#E3C9A2','#8A5A32'], aliases:['cookie','cookies'], recipeId:null },
+
+  { id:'p10', name:'Almond Frangipane Tart', cat:'tarta', emoji:'🥧', price:440, weight:'8 inch tart', rating:4.9, reviews:176,
+    tags:['Contains nuts','Contains dairy'], badge:'Bestseller',
+    desc:'Buttery shortcrust, almond cream baked until just set, poached seasonal fruit and a dust of sugar.',
+    allergens:'Gluten, dairy, eggs, almonds.',
+    ingredients:'Shortcrust (flour, butter, sugar, egg), almond cream (almond, butter, sugar, egg), seasonal fruit.',
+    art:['#F0DAB4','#C08F4C'], aliases:['frangipane','almond tart','almond'], recipeId:'r4' },
+
+  { id:'p11', name:'Lemon Meringue Tartlet', cat:'tarta', emoji:'🍋', price:220, weight:'1 tartlet', rating:4.7, reviews:143,
+    tags:['Contains eggs','Contains dairy'],
+    desc:'Sharp lemon curd, torched Italian meringue, a shell that stays crisp for exactly one day.',
+    allergens:'Gluten, dairy, eggs.', ingredients:'Sweet pastry, lemon curd (lemon, eggs, butter, sugar), meringue.',
+    art:['#F2E7B8','#D4B44C'], aliases:['lemon','meringue','tartlet'], recipeId:null },
+
+  { id:'p12', name:'Dark Chocolate Ganache Tart', cat:'tarta', emoji:'🍫', price:480, weight:'8 inch tart', rating:4.8, reviews:158,
+    tags:['Contains dairy','Contains eggs'],
+    desc:'A thin cocoa shell, 66% ganache and a pinch of sea salt. Served at room temperature, never cold.',
+    allergens:'Gluten, dairy, eggs. May contain soy.', ingredients:'Cocoa pastry, dark chocolate, cream, butter, eggs, sea salt.',
+    art:['#D9C3A4','#6B432A'], aliases:['ganache','chocolate tart','dark chocolate'], recipeId:null }
+];
+
+const RECIPES = [
+  { id:'r1', title:'36-Hour Country Sourdough', emoji:'🍞', art:['#EBCB9E','#B9773B'],
+    time:'36 h (mostly waiting)', difficulty:'Intermediate', yield:'1 × 800 g boule', productId:'p1',
+    aliases:['sourdough','country','boule'],
+    intro:'Our house loaf: 70% hydration, a young levain and a long cold sleep. The crust you hear across the room comes from a screaming-hot dutch oven and steam.',
+    ingredients:['500 g bread flour (11.5–12% protein)','350 g water at 26°C','100 g active starter (100% hydration)','10 g fine sea salt','Rice flour, for dusting'],
+    steps:['Feed the starter at 1:5:5 and wait until it has doubled and smells of yoghurt, about 5 hours.','Mix flour and 325 g water. Rest 45 minutes (autolyse).','Add starter and salt with the remaining 25 g water. Squeeze through your fingers until it comes together.','Bulk ferment 4–6 hours at 26°C, folding every 45 minutes for the first three sets. Dough should be jiggly, not soupy.','Pre-shape on an unfloured bench, rest 30 minutes, then shape tight and stitch the seam.','Into a floured banneton, seam up, 12–18 hours in the fridge at 4°C.','Bake in a dutch oven at 250°C: 20 minutes lid on, 20 minutes lid off until deep mahogany. Cool 1 hour before cutting.'],
+    tip:'If the dough spreads instead of holding its shape, your bulk was too warm or too long. Chill it for 20 minutes and shape again — do not add flour.' },
+
+  { id:'r2', title:'24-Hour Baguette Tradition', emoji:'🥖', art:['#F3DFBB','#CE9A55'],
+    time:'24 h', difficulty:'Advanced', yield:'3 baguettes', productId:'p2',
+    aliases:['baguette'],
+    intro:'A poolish overnight, a gentle fold, and steam. Baguettes are unforgiving: the shaping takes ten minutes to learn and years to like.',
+    ingredients:['500 g bread flour','100 g poolish (flour, water, pinch of yeast — 12 h)','360 g water','10 g salt','2 g instant yeast'],
+    steps:['Make the poolish the night before: 100 g flour, 100 g water, a pinch of yeast. Bubbly by morning.','Mix everything to a shaggy dough, rest 20 minutes, then fold in the bowl.','Bulk 90 minutes at 24°C with two folds. Divide into three 300 g pieces.','Pre-shape into loose cylinders, rest 20 minutes covered.','Shape into 45 cm batons and proof seam-down on a couched linen for 45–60 minutes.','Score three overlapping slashes at 30°, almost parallel to the bench.','Bake at 240°C with steam for 12 minutes, then 8 minutes dry. Listen for the crackle as it cools.'],
+    tip:'Score with the blade at a shallow angle, not straight down. You are opening a flap, not cutting a wound.' },
+
+  { id:'r3', title:'Cardamom Honey Babka', emoji:'🥨', art:['#EFD3A6','#B9854A'],
+    time:'6 h + overnight', difficulty:'Intermediate', yield:'1 loaf (650 g)', productId:'p6',
+    aliases:['babka'],
+    intro:'Enriched dough is a diva: cold butter, long kneading, and a slow overnight proof. The honey soak after baking is non-negotiable.',
+    ingredients:['300 g bread flour','120 g milk, cold','1 egg','40 g sugar','60 g soft butter','5 g salt','3 g yeast','Filling: 60 g butter, 70 g sugar, 2 tsp cardamom, pinch salt','Soak: 40 g honey + 30 g warm water'],
+    steps:['Knead everything except the butter for 5 minutes, then add butter a spoon at a time. Knead until the dough pulls clean off the bowl.','Cold-proof overnight in the fridge.','Roll into a 30 × 40 cm rectangle. Spread cardamom butter to the edges.','Roll up from the long side, then cut lengthways and twist the two halves over each other, cut sides up.','Proof 2 hours at 24°C in a lined tin until doubled.','Bake at 175°C for 35–40 minutes, tenting with foil if it colours too fast.','Brush the honey soak over the hot loaf and leave it in the tin for 20 minutes.'],
+    tip:'If the filling oozes out, the dough was too warm. Chill the rolled rectangle for 15 minutes before cutting.' },
+
+  { id:'r4', title:'Almond Frangipane Tart', emoji:'🥧', art:['#F0DAB4','#C08F4C'],
+    time:'3 h (plus resting)', difficulty:'Easy-ish', yield:'1 × 20 cm tart', productId:'p10',
+    aliases:['frangipane','almond tart'],
+    intro:'The tart that taught us to weigh our eggs. Shortcrust that stays crisp, almond cream that stays soft, fruit that behaves.',
+    ingredients:['220 g plain flour','140 g cold butter, cubed','40 g icing sugar','1 egg yolk','20 g cold water','120 g almond meal','100 g soft butter','90 g sugar','2 eggs','1 tbsp flour','Poached fruit or sliced peaches'],
+    steps:['Rub butter into flour and icing sugar until sandy. Add yolk and water, bring together, do not knead. Rest 1 hour in the fridge.','Roll to 3 mm, line the tin, prick the base and freeze 15 minutes. Blind-bake at 180°C for 18 minutes, then 5 minutes uncovered.','Beat butter and sugar until pale, add eggs one at a time, then almond meal and flour.','Fill the shell two-thirds, arrange fruit on top, and bake at 170°C for 30–35 minutes until the centre barely wobbles.','Cool completely before dusting with icing sugar. Warm is better than cold for serving.'],
+    tip:'Brush the baked shell with a little beaten egg white before adding the frangipane. It builds a waterproof layer and keeps the base crisp.' },
+
+  { id:'r5', title:'Burnt Basque Cheesecake', emoji:'🍰', art:['#F0DDB4','#C99A4E'],
+    time:'1 h 15', difficulty:'Beginner', yield:'1 × 18 cm cake', productId:'p7',
+    aliases:['basque','cheesecake'],
+    intro:'The only cake where a dark, cracked top is the point. High heat, no water bath, no crust — and it improves overnight.',
+    ingredients:['600 g cream cheese, room temperature','180 g sugar','3 eggs + 1 yolk','220 g double cream','20 g plain flour','1 tsp vanilla','Pinch of salt'],
+    steps:['Line a 18 cm tin with two overlapping sheets of parchment, letting it wrinkle above the rim.','Beat cream cheese and sugar until smooth, scraping the bowl twice.','Add eggs one at a time, then cream, vanilla and salt. Sift in the flour and fold just to combine.','Pour through a sieve into the tin.','Bake at 230°C for 28–32 minutes until the top is burnt amber and the centre still wobbles when shaken.','Cool to room temperature, then chill 4 hours. Serve in the parchment, slightly warm is also correct.'],
+    tip:'Run a knife around the parchment once it is cool. Do not try to unmould it — lift the whole paper parcel onto the plate.' },
+
+  { id:'r6', title:'Fig & Rosemary Focaccia', emoji:'🌿', art:['#E4D9A9','#9AA95C'],
+    time:'5 h', difficulty:'Beginner', yield:'1 tray (30 × 20 cm)', productId:'p5',
+    aliases:['focaccia','fig'],
+    intro:'Loud olive oil, dimples to the bottom of the tray, and fruit that caramelises into the crust. The forgiving bread.',
+    ingredients:['400 g bread flour','300 g water','8 g salt','4 g yeast','40 g olive oil, plus more for the tray','6 black figs, quartered','2 sprigs rosemary','Flaky sea salt'],
+    steps:['Mix flour, water, salt and yeast. Rest 20 minutes, then fold in the bowl three times over an hour.','Bulk 2 hours at 26°C, until doubled.','Oil the tray generously, tip in the dough and stretch gently to the corners. Proof 45 minutes.','Oil your fingers, dimple right down to the tray. Press in figs and rosemary.','Bake at 220°C for 20–24 minutes until the edges are dark gold.','Brush with fresh olive oil and shower with flaky salt while hot.'],
+    tip:'Do not be shy with the oil. Focaccia is fried from below — a dry tray gives you a pale, sad bread.' }
+];
+
+const BAKERS = [
+  { name:'La Baguetta Deshpande', role:'Founder & Head Baker', initials:'AD', years:12,
+    t1:'#C0561F', t2:'#E9A23B', focus:['Sourdough','Levain','Bakery ops'], signature:'Country Sourdough',
+    bio:'Started the Bogota - city in 2014 with one second-hand oven and a starter borrowed from her grandmother in Pune. Still tastes every loaf before it leaves the bench.' },
+  { name:'Imran Qureshi', role:'Tartelier', initials:'IQ', years:9,
+    t1:'#3E6B4F', t2:'#8CBB98', focus:['Tartas','Frangipane','Seasonal fruit'], signature:'Almond Frangipane Tart',
+    bio:'Trained in Lyon, came home to Bandra. Believes a tart is 80% shell, and will argue about it politely over chai.' },
+  { name:'Meera Nair', role:'Viennoiserie & Lamination', initials:'MN', years:7,
+    t1:'#7A6A34', t2:'#C9B25E', focus:['Croissants','Lamination','Babka'], signature:'Butter Croissant',
+    bio:'Runs the laminator at 16°C even in May. Twenty-seven layers, three folds, zero shortcuts. Her croissants sell out by 11 am on Saturdays.' }
+];
+
+/* The bot's answer bank. Keys are matched loosely against the question. */
+const KB = [
+  { id:'hours', keys:['hour','open','close','timing','when','sunday','saturday','monday','timings'],
+    a:'<p>The ovens go on at 5:30 am and the counter opens at <b>7:00 am</b>, Tuesday to Sunday. We close at 8:30 pm (9 pm on weekends) — or earlier if we sell out, which happens most Saturdays.</p><p>Mondays are the starter’s day off.</p>',
+    chips:['Where are you?','What’s fresh today?'] },
+
+  { id:'location', keys:['where','location','address','reach','bandra','Bogota - D.C.','store','shop'],
+    a:'<p>We’re at <b>14 Chapel Road, off Carter Road, Bandra West, Bogota - D.C. 400050</b> — opposite the old Parsi dairy.</p><p>Six stools, very good chai, and no wifi password. You’re meant to talk.</p>',
+    chips:['What are your hours?','Do you deliver?'] },
+
+  { id:'delivery', keys:['deliver','delivery','shipping','ship','slots','same day','courier','pincode'],
+    a:'<p>Same-day across Bogota - D.C. if you order before 2 pm: <b>₹59</b>, free over <b>₹999</b>, in 2-hour slots between 10 am and 8 pm.</p><p>Outside Bogota - D.C. we courier breads only (never tarts) in 24–48 hours, flat ₹180.</p>',
+    chips:['Where are you?','Can I order for a wedding?'] },
+
+  { id:'crypto', keys:['crypto','bitcoin','btc','ethereum','eth','usdt','wallet','blockchain','coin'],
+    a:'<p>Crypto checkout is built in: choose <b>BTC, ETH or USDT</b> at payment and we generate an invoice with a 15-minute window, a QR code and a wallet address.</p><p>In this demo the addresses are generated in your browser, so <b>no funds can move</b>. At the real counter we settle in USDT and convert at the day’s rate.</p>',
+    chips:['Which payment methods do you take?','How do I place an order?'] },
+
+  { id:'payment', keys:['pay','payment','card','upi','gpay','phonepe','checkout','invoice'],
+    a:'<p>Card, UPI (GPay / PhonePe / Paytm) and crypto — all in the same checkout.</p><p>This is a demo store, so nothing is really charged and no card details leave your browser.</p>',
+    chips:['How does crypto checkout work?','Do you deliver?'] },
+
+  { id:'gluten', keys:['gluten','coeliac','celiac','wheat','allergy'],
+    a:'<p>Honest answer: we’re a wheat bakery. Every loaf contains gluten and flour is in the air, so nothing here is coeliac-safe.</p><p>The Basque cheesecake uses only a spoon of flour, but it is baked in a shared kitchen. If you’re gluten-<i>sensitive</i> rather than coeliac, long-fermented sourdough is often gentler — but please ask your doctor, not the baker.</p>',
+    chips:['What’s vegan?','Show me the tarts'] },
+
+  { id:'vegan', keys:['vegan','dairy free','dairy-free','plant based','no egg'],
+    a:'<p>Naturally vegan: <b>Country Sourdough, Baguette Tradition, Multigrain Harvest and Fig &amp; Rosemary Focaccia</b>.</p><p>Everything else has butter, milk or eggs. The tarts and croissants are firmly not vegan, and I will not pretend otherwise.</p>',
+    chips:['Show me the breads','What’s the bestseller?'] },
+
+  { id:'storage', keys:['store','storage','keep','fresh','shelf life','freeze','stale','last'],
+    a:'<p><b>Bread:</b> paper bag on the counter for 3 days, or slice and freeze for 2 months. Never the fridge — it stales faster.</p><p><b>Tarts:</b> fridge, 2 days, then 5 minutes at 160°C to wake the crust. <b>Croissants:</b> 3 minutes at 170°C, never the microwave.</p>',
+    chips:['What’s fresh today?','How do you bake sourdough?'] },
+
+  { id:'allergens', keys:['allergen','nut','nuts','dairy','egg','sesame','ingredients'],
+    a:'<p>Every bake card lists its allergens. Short version: all breads contain gluten; croissants, babka, mawa cake and cookies contain dairy and eggs; the frangipane tart contains almonds.</p><p>Our kitchen handles nuts, sesame and dairy, so we can’t promise zero cross-contact.</p>',
+    chips:['Do you have gluten-free bakes?','What’s vegan?'] },
+
+  { id:'custom', keys:['wedding','event','party','bulk','gift','corporate','catering'],
+    a:'<p>Yes — weddings, office breakfasts and gifting. We need <b>10 days’ notice</b> and a minimum of <b>₹5,000</b>.</p><p>Write to <b>hello@La BaguettaBogota - city.in</b> with the date, headcount and what you’re dreaming of.</p>',
+    chips:['Do you do wholesale?','Where are you?'] },
+
+  { id:'wholesale', keys:['wholesale','restaurant','cafe','café','supply','b2b'],
+    a:'<p>We supply cafés and restaurants in Bandra, Khar and Lower Parel: minimum 24 loaves, three deliveries a week, invoiced monthly.</p><p>Email <b>wholesale@La BaguettaBogota - city.in</b> and mention your service days.</p>',
+    chips:['Can I order for a wedding?','What are your hours?'] },
+
+  { id:'classes', keys:['class','workshop','learn','course','teach'],
+    a:'<p>Saturday sourdough class, 9 am–1 pm, four seats, <b>₹2,500</b>. You leave with a jar of starter, a shaped boule and far too many notes.</p><p>Babka and lamination classes run once a month — ask at the counter.</p>',
+    chips:['Show me the recipes','Meet the bakers'] },
+
+  { id:'sourdough-method', keys:['sourdough','starter','levain','ferment','bulk','proof','crumb'],
+    a:'<p>Our method, short version: starter at <b>1:5:5</b>, bulk 4–6 hours at 26°C with three sets of folds, pre-shape, 30-minute bench rest, final shape, then <b>12–18 hours at 4°C</b>.</p><p>Bake at 250°C: 20 minutes lid on, 20 minutes lid off. The full method is in the bakebook.</p>',
+    chips:['Open the sourdough recipe','What’s the bestseller?'] },
+
+  { id:'bakers', keys:['baker','who','team','La Baguetta','imran','meera','owner','founder'],
+    a:'<p>Three of them run the bench: <b>La Baguetta Deshpande</b> (founder, sourdough), <b>Imran Qureshi</b> (tartas and frangipane) and <b>Meera Nair</b> (lamination and viennoiserie).</p><p>Twelve, nine and seven years in respectively — and one very old starter between them.</p>',
+    chips:['What’s the bestseller?','Do you run baking classes?'] },
+
+  { id:'refund', keys:['refund','return','wrong','cancel','complaint','broken'],
+    a:'<p>If something arrives wrong, message us within <b>24 hours</b> with a photo and we’ll refund or re-bake — no argument.</p><p>Orders can be cancelled free until 6 pm the day before delivery.</p>',
+    chips:['How do I track my order?','Do you deliver?'] },
+
+  { id:'tracking', keys:['track','tracking','status','order','receipt','confirmation'],
+    a:'<p>Every order gets an <b>AAR-</b> code on the confirmation screen, plus a receipt you can download.</p><p>In this demo the order is stored only in your browser — reply to the confirmation email with the code and we’ll tell you where the van is.</p>',
+    chips:['How does crypto checkout work?','Where are you?'] }
+];
+
+/* =====================================================================
+   2. SMALL UTILITIES
+   ===================================================================== */
+const $  = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+const money = n => '₹' + Math.round(Number(n) || 0).toLocaleString('en-IN');
+const store = (k, v) => {
+  try {
+    if (v === undefined) { const raw = localStorage.getItem(k); return raw ? JSON.parse(raw) : null; }
+    localStorage.setItem(k, JSON.stringify(v)); return v;
+  } catch (e) { return null; }
+};
+const rand = n => Math.floor(Math.random() * n);
+const randChars = (len, set) => Array.from({ length: len }, () => set[rand(set.length)]).join('');
+const B58 = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
+const HEX = '0123456789abcdef';
+
+function hashStr(s) {
+  let h = 2166136261;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+  return h >>> 0;
+}
+function mulberry32(a) {
+  return function () {
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+/* =====================================================================
+   3. STATE
+   ===================================================================== */
+const state = {
+  cart: store('La Baguetta.cart') || {},
+  promoPct: 0,
+  promoCode: '',
+  promoMsg: '',
+  lastOrder: null,
+  filters: { cat: 'all', q: '', sort: 'featured' },
+  pay: { step: 1, method: 'crypto', asset: 'BTC', details: store('La Baguetta.details') || {}, invoice: null, token: 0 },
+  lastBot: null
+};
+
+/* =====================================================================
+   4. PRODUCT / RECIPE / BAKER RENDERING
+   ===================================================================== */
+function cardHTML(p) {
+  return `<article class="card">
+    <div class="art" style="--a:${p.art[0]};--b:${p.art[1]}">
+      ${p.badge ? `<span class="badge">${p.badge}</span>` : ''}
+      <span class="art-emoji" aria-hidden="true">${p.emoji}</span>
+      <span class="art-tag">${p.weight}</span>
+    </div>
+    <div class="card-body">
+      <div class="card-top">
+        <h3>${p.name}</h3>
+        <span class="rate" title="${p.reviews} reviews">★ ${p.rating}</span>
+      </div>
+      <p class="desc">${p.desc}</p>
+      <div class="tags">${p.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+      <div class="card-foot">
+        <div class="price">${money(p.price)}<small>incl. taxes</small></div>
+        <div class="card-actions">
+          ${p.recipeId ? `<button class="link" data-action="open-recipe" data-id="${p.recipeId}">Recipe</button>` : ''}
+          <button class="btn btn-primary btn-sm" data-action="add-to-cart" data-id="${p.id}" aria-label="Add ${p.name} to bag">Add</button>
+        </div>
+      </div>
+    </div>
+  </article>`;
+}
+
+function renderProducts() {
+  const { cat, q, sort } = state.filters;
+  const needle = q.trim().toLowerCase();
+  let list = PRODUCTS.filter(p => {
+    const matchesCat = cat === 'all' || p.cat === cat;
+    const hay = (p.name + ' ' + p.desc + ' ' + p.tags.join(' ') + ' ' + p.cat + ' ' + p.ingredients).toLowerCase();
+    return matchesCat && (!needle || hay.includes(needle));
+  });
+  if (sort === 'price-asc') list.sort((a, b) => a.price - b.price);
+  else if (sort === 'price-desc') list.sort((a, b) => b.price - a.price);
+  else if (sort === 'rating') list.sort((a, b) => b.rating - a.rating);
+
+  $('#productGrid').innerHTML = list.length
+    ? list.map(cardHTML).join('')
+    : `<p class="empty">No bakes match “${esc(q)}”. Try “sourdough”, “tart” or clear the search.</p>`;
+  $('#prodCount').textContent = `${list.length} ${list.length === 1 ? 'item' : 'items'}`;
+}
+
+function recipeCardHTML(r) {
+  return `<button class="recipe-card reveal" data-action="open-recipe" data-id="${r.id}">
+    <div class="rc-top">
+      <span class="rc-emoji" style="--a:${r.art[0]};--b:${r.art[1]}" aria-hidden="true">${r.emoji}</span>
+      <span>
+        <h3>${r.title}</h3>
+        <small>${r.time} · ${r.difficulty}</small>
+      </span>
+    </div>
+    <p>${r.intro}</p>
+    <div class="rc-meta"><span class="pill">${r.yield}</span><span class="pill">${r.ingredients.length} ingredients</span></div>
+    <span class="rc-open">Open the method <span aria-hidden="true">→</span></span>
+  </button>`;
+}
+
+function renderRecipes() {
+  $('#recipeGrid').innerHTML = RECIPES.map(recipeCardHTML).join('');
+}
+
+function renderBakers() {
+  $('#bakerGrid').innerHTML = BAKERS.map(b => `<article class="baker reveal" style="--t1:${b.t1};--t2:${b.t2}">
+    <span class="years">${b.years} yrs</span>
+    <div class="avatar" style="--t1:${b.t1};--t2:${b.t2}" aria-hidden="true">${b.initials}</div>
+    <h3>${b.name}</h3>
+    <div class="role">${b.role}</div>
+    <p>${b.bio}</p>
+    <div class="tags">${b.focus.map(f => `<span class="tag">${f}</span>`).join('')}</div>
+    <div class="sig"><span>Signature bake</span><b>${b.signature}</b></div>
+  </article>`).join('');
+}
+
+/* =====================================================================
+   5. CART
+   ===================================================================== */
+function cartItems() {
+  return Object.keys(state.cart)
+    .map(id => { const p = PRODUCTS.find(x => x.id === id); return p ? { ...p, qty: state.cart[id] } : null; })
+    .filter(Boolean);
+}
+
+function totals() {
+  const items = cartItems();
+  const subtotal = items.reduce((s, i) => s + i.price * i.qty, 0);
+  const discount = Math.round(subtotal * state.promoPct / 100);
+  const after = subtotal - discount;
+  const delivery = after === 0 ? 0 : (after >= CONFIG.freeDeliveryOver ? 0 : CONFIG.deliveryFee);
+  return { items, subtotal, discount, delivery, total: after + delivery };
+}
+
+function saveCart() {
+  store('La Baguetta.cart', state.cart);
+  const n = Object.values(state.cart).reduce((a, b) => a + b, 0);
+  const badge = $('#cartCount');
+  badge.textContent = n;
+  badge.classList.toggle('hide', n === 0);
+  $('#cartSub').textContent = n ? `${n} ${n === 1 ? 'item' : 'items'} · baked fresh today` : 'Baked fresh, delivered today';
+}
+
+function addToCart(id) {
+  const p = PRODUCTS.find(x => x.id === id);
+  if (!p) return;
+  state.cart[id] = (state.cart[id] || 0) + 1;
+  saveCart(); renderCart();
+  toast(`${p.name} added to your bag`);
+  const btn = document.querySelector('[data-action="open-cart"]');
+  if (btn) { btn.classList.remove('bump'); void btn.offsetWidth; btn.classList.add('bump'); }
+}
+
+function setQty(id, qty) {
+  if (qty <= 0) delete state.cart[id];
+  else state.cart[id] = Math.min(qty, 20);
+  saveCart(); renderCart();
+}
+
+function cartRowHTML(i) {
+  return `<div class="cart-row">
+    <div class="thumb" style="--a:${i.art[0]};--b:${i.art[1]}" aria-hidden="true">${i.emoji}</div>
+    <div class="cr-main">
+      <b>${i.name}</b><span>${money(i.price)} · ${i.weight}</span>
+      <div class="qty">
+        <button data-action="qty" data-id="${i.id}" data-d="-1" aria-label="Decrease ${i.name}">−</button>
+        <span>${i.qty}</span>
+        <button data-action="qty" data-id="${i.id}" data-d="1" aria-label="Increase ${i.name}">+</button>
+      </div>
+    </div>
+    <div class="cr-right">
+      <b>${money(i.price * i.qty)}</b>
+      <button class="link danger" data-action="remove" data-id="${i.id}">Remove</button>
+    </div>
+  </div>`;
+}
+
+function renderCart() {
+  const t = totals();
+  const body = $('#cartBody'), foot = $('#cartFoot');
+
+  if (!t.items.length) {
+    body.innerHTML = `<div class="cart-empty">
+      <div class="big" aria-hidden="true">🥖</div>
+      <p>Your bag is empty — and the sourdough is still warm.</p>
+      <button class="btn btn-primary btn-sm" data-action="goto" data-target="#shop">Browse the counter</button>
+    </div>`;
+    foot.innerHTML = `<p class="fineprint" style="margin:0">Free delivery over ${money(CONFIG.freeDeliveryOver)} · Baked daily in Bandra</p>`;
+    return;
+  }
+
+  body.innerHTML = t.items.map(cartRowHTML).join('');
+
+  const after = t.subtotal - t.discount;
+  const remain = Math.max(0, CONFIG.freeDeliveryOver - after);
+  const pct = Math.min(100, Math.round(after / CONFIG.freeDeliveryOver * 100));
+
+  foot.innerHTML = `
+    <div class="ship-bar">
+      ${remain > 0 ? `Add <b>${money(remain)}</b> more for free delivery` : `Free delivery unlocked ✓`}
+      <div class="ship-track"><div class="ship-fill" style="width:${pct}%"></div></div>
+    </div>
+    <form id="promoForm" class="promo" autocomplete="off">
+      <input id="promoInput" placeholder="Promo code (try La Baguetta10)" aria-label="Promo code" value="${esc(state.promoCode)}">
+      <button class="btn btn-soft btn-sm" type="submit">Apply</button>
+    </form>
+    ${state.promoMsg ? `<p class="promo-msg ${state.promoPct ? 'ok' : 'err'}">${state.promoMsg}</p>` : ''}
+    <dl class="totals">
+      <div><dt>Subtotal</dt><dd>${money(t.subtotal)}</dd></div>
+      ${t.discount ? `<div class="disc"><dt>Discount (${state.promoPct}%)</dt><dd>−${money(t.discount)}</dd></div>` : ''}
+      <div><dt>Delivery</dt><dd>${t.delivery ? money(t.delivery) : 'Free'}</dd></div>
+      <div class="grand"><dt>Total</dt><dd>${money(t.total)}</dd></div>
+    </dl>
+    <button class="btn btn-primary btn-block" data-action="checkout">Checkout · ${money(t.total)}</button>
+    <p class="fineprint">Pay by card, UPI or crypto · Demo store, no real charge</p>`;
+}
+
+/* =====================================================================
+   6. OVERLAYS (cart drawer, modal, scrim)
+   ===================================================================== */
+const cartEl = $('#cart'), modalEl = $('#modal'), modalCard = $('#modalCard');
+const scrim = $('#scrim'), nav = $('#nav'), navBtn = $('#navBtn');
+
+function showScrim() {
+  scrim.hidden = false;
+  requestAnimationFrame(() => scrim.classList.add('show'));
+}
+function hideScrim() {
+  scrim.classList.remove('show');
+  setTimeout(() => { if (!scrim.classList.contains('show')) scrim.hidden = true; }, 280);
+}
+
+function openCart() {
+  renderCart();
+  cartEl.classList.add('open');
+  cartEl.setAttribute('aria-hidden', 'false');
+  showScrim();
+  document.body.classList.add('lock');
+  const first = cartEl.querySelector('button');
+  if (first) setTimeout(() => first.focus({ preventScroll: true }), 260);
+}
+
+function closeCart() {
+  cartEl.classList.remove('open');
+  cartEl.setAttribute('aria-hidden', 'true');
+  if (!modalEl.classList.contains('open')) {
+    hideScrim();
+    document.body.classList.remove('lock');
+  }
+}
+
+function showModal(html, focus = true) {
+  cartEl.classList.remove('open');
+  cartEl.setAttribute('aria-hidden', 'true');
+  modalCard.innerHTML = html;
+  modalCard.scrollTop = 0;
+  modalEl.classList.add('open');
+  modalEl.setAttribute('aria-hidden', 'false');
+  showScrim();
+  document.body.classList.add('lock');
+  if (focus) {
+    const el = modalCard.querySelector('input:not([type="checkbox"]), select');
+    const btn = el || modalCard.querySelector('.close-modal');
+    if (btn) setTimeout(() => { try { btn.focus({ preventScroll: true }); } catch (e) {} }, 90);
+  }
+}
+
+let invTimer = null;
+
+function closeOverlays() {
+  closeCart();
+  modalEl.classList.remove('open');
+  modalEl.setAttribute('aria-hidden', 'true');
+  nav.classList.remove('open');
+  navBtn.setAttribute('aria-expanded', 'false');
+  hideScrim();
+  document.body.classList.remove('lock');
+  clearInterval(invTimer); invTimer = null;
+  state.pay.token++;
+}
+
+function toast(msg, kind = 'ok') {
+  const host = $('#toasts');
+  if (host.children.length > 1) host.firstElementChild.remove();
+  const el = document.createElement('div');
+  el.className = 'toast ' + kind;
+  el.innerHTML = `<span aria-hidden="true">${kind === 'err' ? '!' : '✓'}</span><span>${esc(msg)}</span>`;
+  host.appendChild(el);
+  setTimeout(() => { el.classList.add('out'); setTimeout(() => el.remove(), 320); }, 2800);
+}
+
+/* =====================================================================
+   7. RECIPE MODAL
+   ===================================================================== */
+function openRecipe(id) {
+  const r = RECIPES.find(x => x.id === id);
+  if (!r) return;
+  const p = PRODUCTS.find(x => x.id === r.productId);
+  showModal(`
+    <div class="modal-head">
+      <div><span class="eyebrow">The bakebook</span><h3 id="modalTitle">${r.title}</h3></div>
+      <button class="close-modal" data-action="close-modal" aria-label="Close recipe">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="r-hero">
+        <div class="rc-emoji" style="--a:${r.art[0]};--b:${r.art[1]}" aria-hidden="true">${r.emoji}</div>
+        <div>
+          <small>${r.time} · ${r.difficulty}</small>
+          <div class="rc-meta" style="margin-top:.45rem"><span class="pill">${r.yield}</span><span class="pill">${r.ingredients.length} ingredients</span></div>
+        </div>
+      </div>
+      <p style="font-size:.9rem;color:var(--muted)">${r.intro}</p>
+      <div class="r-cols">
+        <div>
+          <h4>Ingredients</h4>
+          <ul class="ing">${r.ingredients.map((x, i) => `<li><label><input type="checkbox" id="ing${i}"><span>${x}</span></label></li>`).join('')}</ul>
+        </div>
+        <div>
+          <h4>Method</h4>
+          <ol class="steps">${r.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+        </div>
+      </div>
+      <div class="tip"><b>Bench note</b>${r.tip}</div>
+    </div>
+    <div class="modal-foot">
+      <span class="total-badge">Bake it yourself, or ours for <b>${p ? money(p.price) : ''}</b></span>
+      ${p ? `<button class="btn btn-primary btn-sm" data-action="add-to-cart" data-id="${p.id}">Add ${p.name} to bag</button>` : ''}
+    </div>`);
+}
+
+/* =====================================================================
+   8. CHECKOUT + PAYMENTS
+   ===================================================================== */
+function startCheckout() {
+  const t = totals();
+  if (!t.items.length) { toast('Your bag is empty', 'err'); return; }
+  state.pay.step = 1;
+  state.pay.invoice = null;
+  closeCart();
+  renderCheckout(true);
+}
+
+function renderCheckout(focus = false) {
+  const t = totals();
+  if (state.pay.step === 1) { showModal(detailsHTML(t), focus); return; }
+  showModal(paymentHTML(t), focus);
+  if (state.pay.method === 'crypto') startInvoiceTimer();
+}
+
+function detailsHTML(t) {
+  const d = state.pay.details || {};
+  return `<div class="modal-head">
+    <div><span class="eyebrow">Checkout · step 1 of 2</span><h3 id="modalTitle">Where should we send it?</h3></div>
+    <button class="close-modal" data-action="close-modal" aria-label="Close checkout">✕</button>
+  </div>
+  <div class="modal-body">
+    <p class="pay-note">Same-day delivery in Bogota - D.C. for orders placed before 2 pm. You'll pick payment on the next step.</p>
+    <form id="detailsForm" class="form-grid" novalidate>
+      <div class="field"><label for="fName">Full name</label><input id="fName" name="name" value="${esc(d.name || '')}" placeholder="La Baguetta Deshpande" autocomplete="name" required></div>
+      <div class="field"><label for="fEmail">Email</label><input id="fEmail" type="email" name="email" value="${esc(d.email || '')}" placeholder="you@example.com" autocomplete="email" required></div>
+      <div class="field"><label for="fPhone">Phone</label><input id="fPhone" name="phone" inputmode="tel" value="${esc(d.phone || '')}" placeholder="+91 98200 00000" autocomplete="tel" required></div>
+      <div class="field"><label for="fPin">Pincode</label><input id="fPin" name="pin" inputmode="numeric" value="${esc(d.pin || '')}" placeholder="400050" autocomplete="postal-code" required></div>
+      <div class="field span2"><label for="fAddr">Address</label><input id="fAddr" name="addr" value="${esc(d.addr || '')}" placeholder="Flat, building, street, area" autocomplete="street-address" required></div>
+      <div class="span2 alert" id="formErr" hidden></div>
+    </form>
+  </div>
+  <div class="modal-foot">
+    <span class="total-badge">Total <b>${money(t.total)}</b></span>
+    <button class="btn btn-primary" type="submit" form="detailsForm">Continue to payment →</button>
+  </div>`;
+}
+
+function paymentHTML(t) {
+  const m = state.pay.method;
+  return `<div class="modal-head">
+    <div><span class="eyebrow">Checkout · step 2 of 2</span><h3 id="modalTitle">Payment</h3></div>
+    <button class="close-modal" data-action="close-modal" aria-label="Close checkout">✕</button>
+  </div>
+  <div class="modal-body">
+    <div class="seg method-tabs" role="group" aria-label="Payment method">
+      <button class="seg-btn ${m === 'card' ? 'is-active' : ''}" data-action="pay-method" data-method="card">Card</button>
+      <button class="seg-btn ${m === 'upi' ? 'is-active' : ''}" data-action="pay-method" data-method="upi">UPI</button>
+      <button class="seg-btn ${m === 'crypto' ? 'is-active' : ''}" data-action="pay-method" data-method="crypto">Crypto <span class="demo-tag">demo</span></button>
+    </div>
+    ${m === 'card' ? cardPayHTML(t) : m === 'upi' ? upiHTML(t) : cryptoHTML(t)}
+  </div>
+  <div class="modal-foot">
+    <button class="btn btn-ghost btn-sm" data-action="pay-back">← Back</button>
+    <span class="total-badge">Total <b>${money(t.total)}</b></span>
+  </div>`;
+}
+
+function cardPayHTML(t) {
+  return `<form id="cardForm" novalidate>
+    <div class="card-preview" aria-hidden="true">
+      <div class="chip"></div>
+      <div class="num" id="pvNum">•••• •••• •••• ••••</div>
+      <div class="row"><span id="pvName">YOUR NAME</span><span id="pvExp">MM/YY</span></div>
+    </div>
+    <div class="form-grid">
+      <div class="field span2"><label for="cNumber">Card number</label><input id="cNumber" name="number" inputmode="numeric" placeholder="4242 4242 4242 4242" autocomplete="cc-number" required></div>
+      <div class="field"><label for="cExp">Expiry</label><input id="cExp" name="exp" inputmode="numeric" placeholder="MM/YY" autocomplete="cc-exp" required></div>
+      <div class="field"><label for="cCvc">CVC</label><input id="cCvc" name="cvc" inputmode="numeric" placeholder="123" autocomplete="cc-csc" required></div>
+      <div class="field span2"><label for="cName">Name on card</label><input id="cName" name="cname" placeholder="La Baguetta DESHPANDE" autocomplete="cc-name" required></div>
+      <div class="span2 alert" id="payErr" hidden></div>
+    </div>
+    <button class="btn btn-primary btn-block" type="submit" style="margin-top:1rem">Pay ${money(t.total)}</button>
+    <p class="fineprint">Demo mode · use any 16 digits · nothing is charged or stored.</p>
+  </form>`;
+}
+
+function upiHTML(t) {
+  return `<form id="upiForm" novalidate>
+    <p class="pay-note">Enter your UPI ID and we'll send a collect request. In this demo, approval is simulated.</p>
+    <div class="field"><label for="vpa">UPI ID</label><input id="vpa" name="vpa" placeholder="La Baguetta@okhdfcbank" autocomplete="off" required></div>
+    <div style="display:flex;gap:.4rem;margin-top:.7rem;flex-wrap:wrap">
+      <span class="pill">GPay</span><span class="pill">PhonePe</span><span class="pill">Paytm</span><span class="pill">BHIM</span>
+    </div>
+    <div class="alert" id="payErr" hidden></div>
+    <button class="btn btn-primary btn-block" type="submit" style="margin-top:1.1rem">Pay ${money(t.total)} via UPI</button>
+    <p class="fineprint">Demo mode · the request is simulated, not sent.</p>
+  </form>`;
+}
+
+function cryptoHTML(t) {
+  return `<div class="assets" role="group" aria-label="Choose a crypto asset">
+    ${Object.keys(ASSETS).map(k => {
+      const a = ASSETS[k];
+      return `<button class="asset ${state.pay.asset === k ? 'is-active' : ''}" data-action="set-asset" data-asset="${k}" aria-pressed="${state.pay.asset === k}">
+        <span class="asset-ico" aria-hidden="true">${a.icon}</span>
+        <span><b>${k}</b><small>${a.net}</small></span>
+      </button>`;
+    }).join('')}
+  </div>
+  <div id="invoiceBox">${invoiceHTML()}</div>
+  <p class="fineprint">Demo wallet · generated locally, cannot receive funds. Real checkout settles in USDT at the day's rate.</p>`;
+}
+
+function makeInvoice(asset) {
+  const meta = ASSETS[asset];
+  const totalInr = totals().total;
+  const usd = totalInr / CONFIG.inrPerUsd;
+  const amount = Math.ceil((usd / meta.rate) * Math.pow(10, meta.dec)) / Math.pow(10, meta.dec);
+  return {
+    id: 'INV-' + randChars(6, HEX.toUpperCase()),
+    asset,
+    amount,
+    inr: totalInr,
+    addr: meta.prefix + randChars(meta.len, B58),
+    expires: Date.now() + 15 * 60 * 1000,
+    created: Date.now()
+  };
+}
+
+function cryptoAmount(n, asset) {
+  const dec = ASSETS[asset].dec;
+  return n.toFixed(dec).replace(/0+$/, '').replace(/\.$/, '') || '0';
+}
+
+function qrSVG(seed) {
+  const N = 25;
+  const rnd = mulberry32(hashStr(seed) || 12345);
+  const g = Array.from({ length: N }, () => Array(N).fill(0));
+  const finder = (r, c) => {
+    for (let i = 0; i < 7; i++) for (let j = 0; j < 7; j++) {
+      const edge = i === 0 || i === 6 || j === 0 || j === 6;
+      const core = i >= 2 && i <= 4 && j >= 2 && j <= 4;
+      if (edge || core) g[r + i][c + j] = 1;
+    }
+  };
+  finder(0, 0); finder(0, N - 7); finder(N - 7, 0);
+  for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) {
+    const inFinder = (r < 8 && c < 8) || (r < 8 && c >= N - 8) || (r >= N - 8 && c < 8);
+    if (inFinder) continue;
+    if (r === 6 || c === 6) { g[r][c] = (r + c) % 2 === 0 ? 1 : 0; continue; }
+    g[r][c] = rnd() > 0.52 ? 1 : 0;
+  }
+  let rects = '';
+  for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) if (g[r][c]) rects += `<rect x="${c}" y="${r}" width="1" height="1"/>`;
+  return `<svg viewBox="-2 -2 ${N + 4} ${N + 4}" shape-rendering="crispEdges" aria-hidden="true"><rect x="-2" y="-2" width="${N + 4}" height="${N + 4}" fill="#fff"/><g fill="#1B1410">${rects}</g></svg>`;
+}
+
+function invoiceHTML() {
+  let inv = state.pay.invoice;
+  if (!inv || inv.asset !== state.pay.asset) {
+    inv = makeInvoice(state.pay.asset);
+    state.pay.invoice = inv;
+  }
+  const expired = inv.expires <= Date.now();
+  const left = Math.max(0, inv.expires - Date.now());
+  const mm = Math.floor(left / 60000);
+  const ss = String(Math.floor((left % 60000) / 1000)).padStart(2, '0');
+  return `<div class="invoice">
+    <div class="inv-top">
+      <div class="qr">${qrSVG(inv.addr + ':' + inv.amount)}</div>
+      <div class="inv-info">
+        <div class="amt">${cryptoAmount(inv.amount, inv.asset)} ${inv.asset}</div>
+        <div class="inr">≈ ${money(inv.inr)} · ${inv.id}</div>
+        <div class="inv-addr"><code>${inv.addr}</code><button data-action="copy-addr">Copy</button></div>
+      </div>
+    </div>
+    <div class="inv-foot">
+      <span class="timer ${expired ? 'expired' : ''}" id="invTimer">${expired ? 'Expired' : mm + ':' + ss}</span>
+      <span>Scan or copy the address · 15 min window</span>
+      <button class="link" data-action="new-invoice" ${expired ? '' : 'hidden'}>New invoice</button>
+    </div>
+  </div>
+  <button class="btn btn-primary btn-block" id="confirmCrypto" data-action="confirm-crypto" style="margin-top:.9rem" ${expired ? 'disabled' : ''}>
+    I've paid · verify payment
+  </button>`;
+}
+
+function startInvoiceTimer() {
+  clearInterval(invTimer);
+  const tick = () => {
+    const el = $('#invTimer');
+    const inv = state.pay.invoice;
+    if (!el || !inv) { clearInterval(invTimer); return; }
+    const left = inv.expires - Date.now();
+    if (left <= 0) {
+      el.textContent = 'Expired';
+      el.classList.add('expired');
+      const c = $('#confirmCrypto'); if (c) c.disabled = true;
+      const n = document.querySelector('[data-action="new-invoice"]'); if (n) n.hidden = false;
+      clearInterval(invTimer); invTimer = null;
+      return;
+    }
+    el.textContent = `${Math.floor(left / 60000)}:${String(Math.floor((left % 60000) / 1000)).padStart(2, '0')}`;
+  };
+  tick();
+  invTimer = setInterval(tick, 1000);
+}
+
+const METHOD_LABEL = { card: 'Card', upi: 'UPI', crypto: 'Crypto' };
+
+function processPayment(method) {
+  const token = ++state.pay.token;
+  const steps = method === 'crypto'
+    ? ['Invoice matched on chain…', 'Transaction broadcast…', 'Confirming block…', 'Payment settled']
+    : method === 'upi'
+      ? ['Sending collect request…', 'Approved in UPI app…', 'Capturing payment…', 'Payment received']
+      : ['Authorising with bank…', '3-D Secure check passed…', 'Capturing payment…', 'Payment received'];
+
+  showModal(`<div class="processing">
+    <div class="spinner" aria-hidden="true"></div>
+    <h3 id="modalTitle">${method === 'crypto' ? 'Verifying on chain' : 'Processing payment'}</h3>
+    <p class="muted" style="font-size:.84rem">Please keep this window open.</p>
+    <ul class="log" id="payLog"></ul>
+  </div>`, false);
+
+  let i = 0;
+  const run = () => {
+    if (token !== state.pay.token) return;
+    const log = $('#payLog');
+    if (!log) return;
+    if (i < steps.length) {
+      log.insertAdjacentHTML('beforeend', `<li>${steps[i++]}</li>`);
+      setTimeout(run, 640);
+    } else {
+      finishPayment(method);
+    }
+  };
+  setTimeout(run, 540);
+}
+
+function finishPayment(method) {
+  const t = totals();
+  const order = {
+    id: 'AAR-' + randChars(3, 'ABCDEFGHJKLMNPQRSTUVWXYZ') + randChars(4, '0123456789'),
+    items: t.items.map(x => ({ id: x.id, name: x.name, qty: x.qty, price: x.price })),
+    subtotal: t.subtotal, discount: t.discount, delivery: t.delivery, total: t.total,
+    method, asset: method === 'crypto' ? state.pay.asset : null,
+    details: { ...state.pay.details },
+    at: new Date().toISOString()
+  };
+  state.lastOrder = order;
+  try {
+    const hist = store('La Baguetta.orders') || [];
+    hist.unshift({ id: order.id, total: order.total, method, at: order.at });
+    store('La Baguetta.orders', hist.slice(0, 10));
+  } catch (e) {}
+
+  state.cart = {};
+  state.promoPct = 0; state.promoCode = ''; state.promoMsg = '';
+  saveCart();
+  renderCart();
+  showSuccess(order);
+}
+
+function showSuccess(o) {
+  const d = o.details;
+  const methodLabel = o.method === 'crypto' ? `Crypto · ${o.asset}` : METHOD_LABEL[o.method];
+  showModal(`<div class="modal-head">
+      <div><span class="eyebrow">Payment complete</span><h3 id="modalTitle">Order confirmed</h3></div>
+      <button class="close-modal" data-action="close-modal" aria-label="Close">✕</button>
+    </div>
+    <div class="success">
+      <div class="check" aria-hidden="true">✓</div>
+      <h3>That's in the oven.</h3>
+      <div class="oid">${o.id}</div>
+      <p class="muted" style="font-size:.86rem;max-width:42ch;margin:0 auto">
+        Baked today, out for delivery between 10 am and 12 pm. A confirmation is on its way to ${esc(d.email || 'your inbox')}.
+      </p>
+      <div class="receipt">
+        ${o.items.map(i => `<div><span>${i.qty} × ${i.name}</span><span>${money(i.price * i.qty)}</span></div>`).join('')}
+        ${o.discount ? `<div><span>Discount</span><span>−${money(o.discount)}</span></div>` : ''}
+        <div><span>Delivery</span><span>${o.delivery ? money(o.delivery) : 'Free'}</span></div>
+        <div style="border-top:1px solid var(--line);padding-top:.35rem;margin-top:.2rem"><span>Total paid</span><span>${money(o.total)}</span></div>
+        <div><span>Method</span><span>${methodLabel}</span></div>
+        <div><span>Deliver to</span><span>${esc((d.addr || '').slice(0, 34))}</span></div>
+      </div>
+      <div style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-primary" data-action="download-receipt">Download receipt</button>
+        <button class="btn btn-ghost" data-action="close-modal">Keep browsing</button>
+      </div>
+      <p class="fineprint">Demo checkout · ${methodLabel} · nothing was charged, no data left your browser.</p>
+    </div>`);
+}
+
+function receiptText(o) {
+  const lines = [
+    'La Baguetta Bogota - city',
+    '14 Chapel Road, Bandra West, Bogota - D.C. 400050',
+    '',
+    `Order:    ${o.id}`,
+    `Placed:   ${new Date(o.at).toLocaleString('en-IN')}`,
+    `Customer: ${o.details.name || '-'} <${o.details.email || '-'}>`,
+    `Address:  ${o.details.addr || '-'}, ${o.details.pin || ''}`,
+    '',
+    '----------------------------------------',
+    ...o.items.map(i => `${i.qty} x ${i.name}`.padEnd(30) + money(i.price * i.qty)),
+    '----------------------------------------',
+    `Subtotal: ${money(o.subtotal)}`,
+    o.discount ? `Discount: -${money(o.discount)}` : null,
+    `Delivery: ${o.delivery ? money(o.delivery) : 'Free'}`,
+    `TOTAL:    ${money(o.total)}`,
+    `Paid by:  ${o.method === 'crypto' ? 'Crypto (' + o.asset + ')' : METHOD_LABEL[o.method]}`,
+    '',
+    'Demo receipt - no real payment was taken.'
+  ].filter(x => x !== null);
+  return lines.join('\n');
+}
+
+function downloadReceipt() {
+  const o = state.lastOrder;
+  if (!o) return;
+  const blob = new Blob([receiptText(o)], { type: 'text/plain;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `La Baguetta-receipt-${o.id}.txt`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1500);
+  toast('Receipt downloaded');
+}
+
+/* =====================================================================
+   9. CRUMB — THE BAKEBOOK BOT
+   ===================================================================== */
+function matchProduct(q) {
+  let best = null, len = 0;
+  PRODUCTS.forEach(p => p.aliases.forEach(a => {
+    if (a.length > len && q.includes(a)) { best = p; len = a.length; }
+  }));
+  return best;
+}
+function matchRecipe(q) {
+  let best = null, len = 0;
+  RECIPES.forEach(r => (r.aliases || []).forEach(a => {
+    if (a.length > len && q.includes(a)) { best = r; len = a.length; }
+  }));
+  return best;
+}
+
+function miniHTML(p) {
+  return `<div class="mini">
+    <span class="mini-art" style="--a:${p.art[0]};--b:${p.art[1]}" aria-hidden="true">${p.emoji}</span>
+    <span class="mini-main"><b>${p.name}</b><small>${money(p.price)} · ${p.weight}</small></span>
+    <button class="btn btn-primary btn-sm" data-action="add-to-cart" data-id="${p.id}">Add</button>
+  </div>`;
+}
+
+function productReply(p, mode) {
+  if (mode === 'price') {
+    return { html: `<p><b>${p.name}</b> is <b>${money(p.price)}</b> for ${p.weight}.</p><p>${p.badge ? 'It is one of our ' + p.badge.toLowerCase() + 's. ' : ''}Baked daily; the last one usually goes by 4 pm.</p>` + miniHTML(p),
+      chips: [`Is ${p.name} vegan?`, p.recipeId ? `Recipe for ${p.name}` : 'What’s the bestseller?'] };
+  }
+  if (mode === 'allergens') {
+    return { html: `<p><b>${p.name}</b><br><b>Contains:</b> ${p.allergens}</p><p><b>What goes in:</b> ${p.ingredients}</p>`,
+      chips: [`Is ${p.name} vegan?`, 'Do you have gluten-free bakes?'] };
+  }
+  if (mode === 'storage') {
+    return { html: `<p><b>${p.name}</b> keeps best in paper on the counter — 3 days for bread, 2 days in the fridge for anything with cream.</p><p>Freeze in slices, never the fridge, and reheat at 160°C for 5 minutes.</p>`,
+      chips: ['Show me the breads', 'What’s fresh today?'] };
+  }
+  return { html: `<p>${p.desc}</p>` + miniHTML(p),
+    chips: [`Is ${p.name} vegan?`, p.recipeId ? `Recipe for ${p.name}` : 'What’s the bestseller?'] };
+}
+
+function recipeReply(r) {
+  return { html: `<p><b>${r.title}</b> — ${r.time}, ${r.difficulty.toLowerCase()}, makes ${r.yield.toLowerCase()}.</p><p>${r.intro}</p><p>I have the full method, weights and bench notes in the bakebook.</p>`,
+    chips: [`Open the ${r.aliases[0]} recipe`, 'Show me the recipes'] };
+}
+
+function categoryReply(cat) {
+  const label = cat === 'bread' ? 'breads' : cat === 'dessert' ? 'desserts' : 'tartas';
+  const list = PRODUCTS.filter(p => p.cat === cat);
+  return { html: `<p>Here's the ${label} counter today:</p>` + list.slice(0, 4).map(miniHTML).join(''),
+    chips: ['What’s the bestseller?', cat === 'tarta' ? 'Show me the breads' : 'Show me the tarts'] };
+}
+
+function recommendReply() {
+  const top = [...PRODUCTS].sort((a, b) => b.rating - a.rating || b.reviews - a.reviews).slice(0, 3);
+  return { html: `<p>At this hour I'd point you at these three:</p>` + top.map(miniHTML).join('') +
+    `<p style="margin-top:.5rem">The sourdough is still warm; the frangipane comes out of the oven at 8 am sharp.</p>`,
+    chips: ['Is anything vegan?', 'Do you deliver?', 'How does crypto checkout work?'] };
+}
+
+function botAnswer(raw) {
+  const q = raw.toLowerCase().replace(/[’‘]/g, "'").replace(/[?!.,;]/g, ' ').replace(/\s+/g, ' ').trim();
+  const padded = ' ' + q + ' ';
+  const has = (...ws) => ws.some(w => w.length <= 4
+    ? new RegExp('(^|[^a-z])' + w + '([^a-z]|$)').test(q)
+    : q.includes(w));
+
+  if (!q) return { html: '<p>Ask me about a bake, a recipe, delivery or payment — I only know what is in this bakebook.</p>', chips: ['What’s fresh today?'] };
+
+  if (/^(hi|hey|hello|namaste|good (morning|afternoon|evening)|yo)\b/.test(q)) {
+    return { html: `<p>Namaste — I'm <b>Crumb</b>, the bot behind the counter. I know every bake, every recipe and exactly how the crypto checkout works.</p><p>What are you after?</p>`,
+      chips: ['What’s fresh today?', 'Do you deliver?', 'How does crypto checkout work?', 'Show me the tarts'] };
+  }
+  if (/\b(thanks|thank you|thx|cheers)\b/.test(q)) {
+    return { html: '<p>Any time. Come say hi at the counter — first slice is on us. 🥖</p>', chips: ['What’s fresh today?'] };
+  }
+
+  const prod = matchProduct(q);
+  const rec = matchRecipe(q);
+  const recipeIntent = /recipe|how (do|to)|method|steps|bake it|make it|ferment|proof|laminate/.test(q);
+
+  if (prod && /\b(add|buy|bag|cart)\b/.test(q)) {
+    addToCart(prod.id);
+    return { html: `<p>Done — <b>${prod.name}</b> is in your bag (${money(prod.price)}).</p>`, chips: ['Open my bag', 'What’s the bestseller?'] };
+  }
+
+  if (rec && recipeIntent) return recipeReply(rec);
+  if (rec && !prod) return recipeReply(rec);
+
+  if (prod) {
+    if (has('price', 'cost', 'much', 'rate', 'kitna')) return productReply(prod, 'price');
+    if (has('vegan', 'gluten', 'allergen', 'dairy', 'nut', 'contain', 'ingredient')) return productReply(prod, 'allergens');
+    if (has('keep', 'store', 'storage', 'freeze', 'stale', 'fresh')) return productReply(prod, 'storage');
+    return productReply(prod);
+  }
+
+  if (/\b(tarts?|tartas?|tartlets?)\b/.test(q) && !/(frangipane|lemon|chocolate|almond|ganache|meringue)/.test(q)) return categoryReply('tarta');
+  if (/\b(breads?|loaves|loaf)\b/.test(q) && !/(sourdough|baguette|multigrain|focaccia|croissant)/.test(q)) return categoryReply('bread');
+  if (/\b(desserts?|sweets?|cakes?)\b/.test(q) && !/(basque|mawa|babka|cheesecake)/.test(q)) return categoryReply('dessert');
+
+  if (has('recommend', 'best', 'popular', 'bestseller', 'favourite', 'favorite', 'suggest', 'fresh', 'today')) return recommendReply();
+
+  if (/\b(open my bag|my bag|cart)\b/.test(q)) {
+    openCart();
+    return { html: '<p>Opened it for you — the bag is on the right (or full screen on your phone).</p>', chips: ['What’s fresh today?'] };
+  }
+  if (/\b(chat|bot|crumb)\b/.test(q)) {
+    return { html: '<p>That’s me. Everything I say comes from the local bakebook: 12 bakes, 6 recipes and 16 written answers. No internet, no guessing.</p>', chips: ['What can you do?', 'Show me the recipes'] };
+  }
+  if (/\b(what can you do|help)\b/.test(q)) {
+    return { html: '<p>I can tell you what is baking, what is in a bake, how a recipe works, where we are, how delivery runs, and how card / UPI / crypto checkout behaves.</p><p>Try me:</p>',
+      chips: ['What’s fresh today?', 'Recipe for sourdough', 'Is the babka vegan?', 'Crypto payments'] };
+  }
+
+  let best = null, score = 0;
+  KB.forEach(e => {
+    let s = 0;
+    e.keys.forEach(k => { if (k.length > 3 ? q.includes(k) : padded.includes(' ' + k + ' ')) s++; });
+    if (s > score) { score = s; best = e; }
+  });
+  if (best) {
+    const r = { html: best.a, chips: best.chips };
+    if (best.id === 'sourdough-method') r.chips = ['Recipe for sourdough', 'What’s the bestseller?'];
+    return r;
+  }
+
+  if (/\b(recipe|bake|baking)\b/.test(q) && rec) return recipeReply(rec);
+
+  return { html: `<p>That one isn't in my bakebook — I'd rather say so than invent an answer.</p><p>I'm good on: the bakes, the recipes, delivery, allergens, custom orders and payments (including crypto).</p>`,
+    chips: ['What’s fresh today?', 'Show me the recipes', 'Do you deliver?', 'Crypto payments'] };
+}
+
+function scrollChat() {
+  const log = $('#chatLog');
+  log.scrollTop = log.scrollHeight;
+}
+
+function addMsg(kind, html, chips) {
+  const wrap = document.createElement('div');
+  wrap.className = 'msg ' + kind;
+  wrap.innerHTML = html;
+  if (chips && chips.length) {
+    const row = document.createElement('div');
+    row.className = 'chips';
+    chips.forEach(text => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'chip';
+      b.dataset.action = 'chat-chip';
+      b.dataset.q = text;
+      b.textContent = text;
+      row.appendChild(b);
+    });
+    wrap.appendChild(row);
+  }
+  $('#chatLog').appendChild(wrap);
+  scrollChat();
+}
+
+function sendChat(text) {
+  if (!text || !text.trim()) return;
+  addMsg('user', esc(text));
+  $('#chatInput').value = '';
+  const dots = document.createElement('div');
+  dots.className = 'typing';
+  dots.innerHTML = '<i></i><i></i><i></i>';
+  $('#chatLog').appendChild(dots);
+  scrollChat();
+  setTimeout(() => {
+    dots.remove();
+    const reply = botAnswer(text);
+    addMsg('bot', reply.html, reply.chips);
+  }, 430 + Math.random() * 480);
+}
+
+function toggleChat(force) {
+  const panel = $('#chatPanel'), fab = $('#chatFab');
+  const open = force === undefined ? !panel.classList.contains('open') : !!force;
+  panel.classList.toggle('open', open);
+  panel.setAttribute('aria-hidden', String(!open));
+  fab.setAttribute('aria-expanded', String(open));
+  if (open) {
+    setTimeout(() => { try { $('#chatInput').focus({ preventScroll: true }); } catch (e) {} scrollChat(); }, 220);
+  }
+}
+
+/* =====================================================================
+   10. THEME
+   ===================================================================== */
+const SUN = '<circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/>';
+const MOON = '<path d="M20.5 14.2A8.6 8.6 0 0 1 9.8 3.5a8.6 8.6 0 1 0 10.7 10.7Z"/>';
+
+function setTheme(t) {
+  document.documentElement.dataset.theme = t;
+  store('La Baguetta.theme', t);
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.content = t === 'dark' ? '#120F0C' : '#FBF7F0';
+  const icon = $('#themeIcon');
+  if (icon) icon.innerHTML = t === 'dark' ? SUN : MOON;
+  icon && icon.setAttribute('aria-label', t === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+}
+
+/* =====================================================================
+   11. EVENT WIRING
+   ===================================================================== */
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-action]');
+  if (!t) return;
+  const a = t.dataset.action;
+  const id = t.dataset.id;
+
+  switch (a) {
+    case 'theme':
+      setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
+      break;
+
+    case 'toggle-nav': {
+      const open = nav.classList.toggle('open');
+      t.setAttribute('aria-expanded', String(open));
+      break;
+    }
+
+    case 'goto': {
+      const target = document.querySelector(t.dataset.target);
+      nav.classList.remove('open');
+      navBtn.setAttribute('aria-expanded', 'false');
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      break;
+    }
+
+    case 'open-cart': openCart(); break;
+    case 'close-cart': closeOverlays(); break;
+    case 'close-modal': closeOverlays(); break;
+
+    case 'add-to-cart': addToCart(id); break;
+
+    case 'qty':
+      setQty(id, (state.cart[id] || 0) + Number(t.dataset.d));
+      break;
+
+    case 'remove':
+      delete state.cart[id];
+      saveCart(); renderCart();
+      toast('Removed from bag');
+      break;
+
+    case 'checkout': startCheckout(); break;
+
+    case 'filter': {
+      state.filters.cat = t.dataset.cat;
+      $$('#filterRow .seg-btn').forEach(b => b.classList.toggle('is-active', b === t));
+      renderProducts();
+      break;
+    }
+
+    case 'open-recipe': openRecipe(id); break;
+
+    case 'pay-method':
+      state.pay.method = t.dataset.method;
+      if (state.pay.method === 'crypto' && !state.pay.invoice) state.pay.invoice = makeInvoice(state.pay.asset);
+      renderCheckout(false);
+      break;
+
+    case 'set-asset':
+      state.pay.asset = t.dataset.asset;
+      state.pay.invoice = makeInvoice(state.pay.asset);
+      renderCheckout(false);
+      toast(`Invoice re-quoted in ${state.pay.asset}`);
+      break;
+
+    case 'pay-back':
+      state.pay.step = 1;
+      clearInterval(invTimer);
+      renderCheckout(true);
+      break;
+
+    case 'new-invoice':
+      state.pay.invoice = makeInvoice(state.pay.asset);
+      renderCheckout(false);
+      toast('Fresh invoice generated');
+      break;
+
+    case 'copy-addr': {
+      const inv = state.pay.invoice;
+      if (!inv) break;
+      const done = () => toast('Wallet address copied');
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(inv.addr).then(done).catch(() => fallbackCopy(inv.addr, done));
+      } else fallbackCopy(inv.addr, done);
+      break;
+    }
+
+    case 'confirm-crypto':
+      if (!state.pay.invoice || state.pay.invoice.expires <= Date.now()) {
+        toast('That invoice expired — generate a new one', 'err');
+        break;
+      }
+      processPayment('crypto');
+      break;
+
+    case 'download-receipt': downloadReceipt(); break;
+
+    case 'open-chat':
+      toggleChat(true);
+      if (t.dataset.q) sendChat(t.dataset.q);
+      break;
+
+    case 'toggle-chat':
+      toggleChat(t.dataset.force === '0' ? false : undefined);
+      break;
+
+    case 'chat-chip': {
+      const q = t.dataset.q || '';
+      if (/^open my bag$/i.test(q)) { openCart(); break; }
+      sendChat(q);
+      break;
+    }
+  }
+});
+
+function fallbackCopy(text, done) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); done(); } catch (e) { toast('Could not copy — select it manually', 'err'); }
+  ta.remove();
+}
+
+/* forms */
+document.addEventListener('submit', e => {
+  const f = e.target;
+
+  if (f.id === 'detailsForm') {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(f).entries());
+    const name = (data.name || '').trim();
+    const email = (data.email || '').trim();
+    const phone = (data.phone || '').trim();
+    const pin = (data.pin || '').trim();
+    const addr = (data.addr || '').trim();
+    let err = '';
+    if (name.length < 2) err = 'Please enter your full name.';
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) err = 'That email does not look right.';
+    else if (phone.replace(/\D/g, '').length < 8) err = 'Please add a reachable phone number.';
+    else if (!/^\d{5,6}$/.test(pin)) err = 'Pincode should be 5 or 6 digits.';
+    else if (addr.length < 6) err = 'Please add a full delivery address.';
+
+    const box = $('#formErr');
+    if (err) {
+      box.textContent = err;
+      box.hidden = false;
+      box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+    state.pay.details = { name, email, phone, pin, addr };
+    store('La Baguetta.details', state.pay.details);
+    state.pay.step = 2;
+    renderCheckout(true);
+    return;
+  }
+
+  if (f.id === 'cardForm') {
+    e.preventDefault();
+    const number = ($('#cNumber').value || '').replace(/\s/g, '');
+    const exp = ($('#cExp').value || '').trim();
+    const cvc = ($('#cCvc').value || '').trim();
+    const cname = ($('#cName').value || '').trim();
+    let err = '';
+    if (number.length < 15 || number.length > 16) err = 'Card number should be 15–16 digits.';
+    else if (!/^\d{2}\/\d{2}$/.test(exp)) err = 'Expiry should be MM/YY.';
+    else if (cvc.length < 3) err = 'CVC should be 3–4 digits.';
+    else if (cname.length < 2) err = 'Add the name printed on the card.';
+    const box = $('#payErr');
+    if (err) { box.textContent = err; box.hidden = false; return; }
+    processPayment('card');
+    return;
+  }
+
+  if (f.id === 'upiForm') {
+    e.preventDefault();
+    const vpa = ($('#vpa').value || '').trim();
+    if (!/^[a-zA-Z0-9.\-_]{2,}@[a-zA-Z]{2,}$/.test(vpa)) {
+      const box = $('#payErr');
+      box.textContent = 'That UPI ID looks incomplete — try name@bank.';
+      box.hidden = false;
+      return;
+    }
+    processPayment('upi');
+    return;
+  }
+
+  if (f.id === 'promoForm') {
+    e.preventDefault();
+    const input = $('#promoInput');
+    const code = (input.value || '').trim().toUpperCase();
+    state.promoCode = code;
+    if (code === CONFIG.promo.code) {
+      state.promoPct = CONFIG.promo.pct;
+      state.promoMsg = `Code applied — ${CONFIG.promo.pct}% off.`;
+      toast('Promo applied');
+    } else if (!code) {
+      state.promoPct = 0; state.promoMsg = '';
+    } else {
+      state.promoPct = 0;
+      state.promoMsg = 'That code is not valid. Try La Baguetta10.';
+    }
+    renderCart();
+    return;
+  }
+
+  if (f.id === 'newsForm') {
+    e.preventDefault();
+    const email = ($('#newsEmail').value || '').trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { toast('That email looks incomplete', 'err'); return; }
+    toast('You’re on the list — first letter on Friday');
+    f.reset();
+    return;
+  }
+
+  if (f.id === 'chatForm') {
+    e.preventDefault();
+    sendChat($('#chatInput').value);
+    return;
+  }
+});
+
+/* search + sort */
+$('#searchInput').addEventListener('input', e => {
+  state.filters.q = e.target.value;
+  renderProducts();
+});
+$('#sortSelect').addEventListener('change', e => {
+  state.filters.sort = e.target.value;
+  renderProducts();
+});
+
+/* live card formatting */
+document.addEventListener('input', e => {
+  const el = e.target;
+  if (el.id === 'cNumber') {
+    el.value = el.value.replace(/\D/g, '').slice(0, 16).replace(/(.{4})/g, '$1 ').trim();
+    const pv = $('#pvNum');
+    if (pv) pv.textContent = el.value || '•••• •••• •••• ••••';
+  }
+  if (el.id === 'cExp') {
+    const d = el.value.replace(/\D/g, '').slice(0, 4);
+    el.value = d.length > 2 ? d.slice(0, 2) + '/' + d.slice(2) : d;
+    const pv = $('#pvExp');
+    if (pv) pv.textContent = el.value || 'MM/YY';
+  }
+  if (el.id === 'cCvc') el.value = el.value.replace(/\D/g, '').slice(0, 4);
+  if (el.id === 'cName') {
+    const pv = $('#pvName');
+    if (pv) pv.textContent = (el.value || 'YOUR NAME').toUpperCase();
+  }
+});
+
+/* scrim + backdrop + keyboard */
+scrim.addEventListener('click', closeOverlays);
+modalEl.addEventListener('click', e => { if (e.target === modalEl) closeOverlays(); });
+nav.addEventListener('click', e => { if (e.target.tagName === 'A') { nav.classList.remove('open'); navBtn.setAttribute('aria-expanded', 'false'); } });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeOverlays();
+});
+
+/* newsletter enter key inside inline form */
+$('#newsEmail').addEventListener('keydown', e => {
+  if (e.key === 'Enter') { e.preventDefault(); $('#newsForm').requestSubmit(); }
+});
+
+/* =====================================================================
+   12. BOOT
+   ===================================================================== */
+function boot() {
+  renderProducts();
+  renderRecipes();
+  renderBakers();
+  renderCart();
+  saveCart();
+
+  $('#year').textContent = new Date().getFullYear();
+  $('#kbMeta').textContent = `${PRODUCTS.length} bakes · ${RECIPES.length} recipes · ${KB.length} answers`;
+  $('#kbMeta').style.cssText = 'white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;max-width:210px';
+
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  setTheme(store('La Baguetta.theme') || (prefersDark ? 'dark' : 'light'));
+
+  addMsg('bot', `<p>Namaste — I'm <b>Crumb</b>, the bot behind the counter. Everything I know lives in this page: the 12 bakes, the 6 bakebook recipes, and how delivery and crypto checkout work.</p><p>What can I get you?</p>`,
+    ['What’s fresh today?', 'Do you deliver?', 'How does crypto checkout work?', 'Show me the tarts']);
+
+  if (Object.keys(state.cart).length) {
+    toast(`Welcome back — ${Object.values(state.cart).reduce((a, b) => a + b, 0)} item(s) still in your bag`);
+  }
+
+  /* scroll reveal */
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    $$('.reveal').forEach(el => io.observe(el));
+  } else {
+    $$('.reveal').forEach(el => el.classList.add('in'));
+  }
+
+}
+
+boot();
+
+</script>
+</body>
+</html>
